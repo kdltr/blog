@@ -1,0 +1,6 @@
+((title . "Billets")
+ (category . "posts"))
+
+`(nav "Liens vers les billets")
+
+; vi: set ft=scheme:

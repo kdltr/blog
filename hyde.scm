@@ -1,0 +1,81 @@
+(use base64
+     hyde
+     posix
+     posix-extras
+     srfi-18)
+
+(set! sxml-conversion-rules
+  (cons `(*PI* *preorder* . ,(lambda (tag args)
+                              (string-append "<?"
+                                             (symbol->string (car args))
+                                             " "
+                                             (string-join (cdr args))
+                                             "?>\n")))
+        sxml-conversion-rules))
+
+
+(define $ (environment-ref (page-eval-env) '$))
+
+(default-page-vars '(((* any)
+                       (main-title ("en" . "Kooda’s burrow")
+                                   ("fr" . "Le terrier de Kooda"))
+                       (base-uri . "http://www.upyum.com")
+                       (footer ("en" . ("Website generated with "
+                                        (a (@ (href "http://wiki.call-cc.org/egg/hyde")) "Hyde") "."))
+                               ("fr" . ("Site généré avec "
+                                        (a (@ (href "http://wiki.call-cc.org/egg/hyde")) "Hyde") "."))))
+                     ((: bos "en/" (+ any))
+                       (lang . "en"))
+                     ((: bos "fr/" (+ any))
+                       (lang . "fr"))
+                     ((: "post/" (+ any) eos)
+                       (layouts "post.sxml" "default.sxml")
+                       (category . "posts"))))
+
+(default-extension "xhtml")
+
+(define (i18n-cond en fr)
+  (if (string=? ($ 'lang) "en")
+    en
+    fr))
+
+(define (i18n-ref var)
+  (alist-ref ($ 'lang) ($ var) string=?))
+
+(define (i18n-link path)
+  (string-append "/" ($ 'lang) "/" path))
+
+(define (menu-link title path #!optional (id path))
+  (let ((id (pathify id)))
+    `(a (@ (href ,(string-append (i18n-link (pathify path)) ".xhtml"))
+           (id ,(string-append id "-link"))
+           ,(if (string=? ($ 'category) id) '(class selected) '()))
+        ,title)))
+
+(define (file-data-url mime path)
+  (string-append "url(data:"
+                 mime
+                 ";base64,"
+                 (base64-encode
+                   (call-with-input-file path (cut read-string #f <>)))
+                 ")"))
+
+(define (format-seconds seconds)
+  (time->string (seconds->utc-time seconds) "%Y-%m-%d"))
+
+(define (sort-by pages accessor)
+  (sort pages (lambda (p1 p2) (> (accessor p1) (accessor p2)))))
+
+(define (pages-matching regex)
+  (map cdr (filter (lambda (p) (irregex-match regex (car p)))
+                   ((environment-ref (page-eval-env) 'pages)))))
+
+(define (all-posts)
+  (sort-by (pages-matching `(: ,($ 'lang) "/post/" (+ any) ".wiki"))
+           (cut $ 'date <>)))
+
+(for-each
+  (lambda (binding)
+    (apply environment-extend! (cons (page-eval-env) binding)))
+  `((all-posts ,all-posts)))
+

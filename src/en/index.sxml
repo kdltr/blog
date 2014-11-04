@@ -1,0 +1,28 @@
+((title . "Home")
+ (category . "index"))
+
+`((p
+    "Hi! This is my website!")
+  (p
+    "Todo list:"
+    (ul
+      (li "Languages links and language-independent URLs")
+      (li "Try out the new versions of Hyde and SCSS")
+      (li "Navigation links in posts")
+      (li "Estimation of reading time")
+      (li "Posts archive page (? or everything in posts.xhtml)")
+      (li "Hide other (empty) pages for now (?)")
+      (li "Tagging system")
+      (li "Atom feeds (with tag feeds)")
+      (li "Table of content generation in posts")
+      (li "Gallery-like history for the drawings page")
+      ))
+  (p
+    "Done:"
+    (ul
+      (li "Latest posts in posts.xhtml")
+      )
+    )
+  )
+
+; vi: set ft=scheme:

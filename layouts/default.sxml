@@ -1,0 +1,33 @@
+()
+`((*PI* xml "version=\"1.0\"" "encoding=\"utf-8\"")
+  (*PI* xml-stylesheet "type=\"text/css\"" "href=\"/style.css\"")
+  (doctype-html)
+  (html (@ (xmlns "http://www.w3.org/1999/xhtml")
+           (xml:lang ,($ 'lang)))
+   (head
+     (meta (@ (name viewport) (content "initial-scale=1.0")))
+     (title ,(i18n-ref 'main-title) " - " ,($ 'title)))
+   (body
+     (header
+       ,(i18n-ref 'main-title))
+     (nav
+       ,(i18n-cond
+          (menu-link "Home" "index" "index")
+          (menu-link "Accueil" "index" "index"))
+       ,(map
+          (lambda (p)
+            (i18n-cond
+              (menu-link (car p) (car p))
+              (menu-link (cdr p) (car p))))
+          '(("Drawings" . "Dessins")
+            ("Music" . "Musique")
+            ("Posts" . "Billets")
+            ("Projects" . "Projets"))))
+     (main
+       (article
+         (h1 (@ (id ,(string-append ($ 'category) "-title"))) ,($ 'title))
+         (inject ,contents)))
+     (footer
+       ,(i18n-ref 'footer)))))
+
+;; vi: set ft=scheme:

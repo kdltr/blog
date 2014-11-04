@@ -1,0 +1,33 @@
+((title . "Premier post")
+ (date . 1414945651)
+ (updated . 1414945651))
+
+Ceci est un petit test, mon premier billet écrit grâce à Hyde, un
+outil en CHICKEN Scheme que je recommande.
+
+== CHICKEN Scheme
+
+CHICKEN est une implémentation du langage Scheme (du standard R5RS pour
+être plus précis).
+
+CHICKEN est un compilateur Scheme vers C, ce qui le rend très cool.
+
+=== CPS
+
+Le CPS (ou “Continuation Passing Style”) c’est très étrange,
+mais bien pratique !
+
+=== Ramasse-miettes
+
+Le ramasse-miettes de CHICKEN est vraiment bien pensé et très facile
+à comprendre.
+Je vous invite d’ailleurs à lire l’excellent
+[[http://more-magic.net|billet de sjamann]] (en anglais) à son sujet.
+
+== Hyde
+
+Blabla à propos de Hyde.
+
+Petits bouts de code issus de ce blog.
+
+Dépôt contenant le code complet de ce blog ?

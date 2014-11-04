@@ -1,0 +1,225 @@
+()
+(let* ((base03    "#002b36") ; dark background
+       (base02    "#073642") ; dark background highlights
+       (base01    "#586e75") ; dark secondary content / light optional emphasized content
+       (base00    "#45545a") ; light primary content (default #657b83)
+       (base0     "#839496") ; dark primary content
+       (base1     "#93a1a1") ; light secondary content / dark optional emphasized content
+       (base2     "#eee8d5") ; light background highlights
+       (base3     "#fdfaf1") ; light background (default #fdf6e3)
+       (bg base3)
+       (bg-highlight base2)
+       (secondary-content base1)
+       (primary-content base00)
+       (optional-content base01)
+       (yellow    "#b58900")
+       (orange    "#cb4b16")
+       (red       "#dc322f")
+       (magenta   "#d33682")
+       (violet    "#6c71c4")
+       (blue      "#268bd2")
+       (cyan      "#2aa198")
+       (green     "#859900")
+       (index-color red)
+       (drawings-color cyan)
+       (music-color violet)
+       (posts-color yellow)
+       (projects-color green))
+  `(css+
+
+     ,@(call-with-input-file "resources/reset.scss" read)
+
+     (body
+       (background-color ,bg)
+       (color ,primary-content)
+       (font-family "\"Liberation Sans\", sans-serif")
+       (max-width 50em)
+       (margin-left auto)
+       (margin-right auto)
+       (padding-left 0.2em)
+       (padding-right 0.2em)
+       (padding-top 4ex)
+
+       ((> header)
+         (float left)
+         (font-size 2em)
+         (color ,optional-content)
+
+         ((& :after)
+           (content "\"\"")
+           (display inline-block)
+           (width 71px)
+           (height 58px)
+           (vertical-align middle)
+           (margin-left 0.5rem)
+           (background-image ,(file-data-url "image/png"
+                                             "resources/miniloutre.png"))))
+
+       ((> nav)
+         (margin-top 2ex)
+         (margin-bottom 1ex)
+         (float right)
+
+        ((> a)
+          (text-decoration none)
+          (display inline-block)
+          (border-width 1px)
+          (border-style solid)
+          (border-radius 5px)
+          (padding 0.5em)
+          (margin-left 1em)
+          (margin-bottom 0.5em)))
+
+       ((> footer)
+         (font-size 0.8em)
+         (padding-top 2ex)
+         (text-align right)
+         (color ,secondary-content)))
+
+     (main
+       (font-family "\"Liberation Serif\", serif")
+       (clear both)
+       (border-top-width 1px)
+       (border-top-style solid)
+       (border-top-color ,secondary-content)
+
+       ((> *)
+         (max-width 40em)
+         (margin-left auto)
+         (margin-right auto))
+
+       ((> article)
+         ((> aside)
+           (margin-top -2.5ex)
+           (margin-left 2ex)
+           (float right)
+           (color ,secondary-content)
+           (font-size 0.8em)
+
+           ((> p)
+             (line-height 2.5ex)
+             (margin-top 0)
+             (margin-bottom 0)
+             (text-align right)))
+
+         ((> nav)
+           ((> p)
+             ((> a)
+              (font-size 1.5em))))))
+
+     (|#index-link|
+       (color ,index-color)
+       (((& :hover) (& |.selected|))
+         (border-color ,index-color)
+         (color ,bg-highlight)
+         (background-color ,index-color)))
+     (|#index-title|
+       (background-color ,index-color))
+     (|#posts-link|
+       (color ,posts-color)
+       (((& :hover) (& |.selected|))
+         (border-color ,posts-color)
+         (color ,bg-highlight)
+         (background-color ,posts-color)))
+     (|#posts-title|
+       (background-color ,posts-color))
+     (|#drawings-link|
+       (color ,drawings-color)
+       (((& :hover) (& |.selected|))
+         (border-color ,drawings-color)
+         (color ,bg-highlight)
+         (background-color ,drawings-color)))
+     (|#drawings-title|
+       (background-color ,drawings-color))
+     (|#music-link|
+       (color ,music-color)
+       (((& :hover) (& |.selected|))
+         (border-color ,music-color)
+         (color ,bg-highlight)
+         (background-color ,music-color)))
+     (|#music-title|
+       (background-color ,music-color))
+     (|#projects-link|
+       (color ,projects-color)
+       (((& :hover) (& |.selected|))
+         (border-color ,projects-color)
+         (color ,bg-highlight)
+         (background-color ,projects-color)))
+     (|#projects-title|
+       (background-color ,projects-color))
+
+     ((h1 h2 h3 h4 h5 h6)
+       (color ,optional-content)
+       (margin-bottom 1ex)
+       (margin-top 2ex))
+
+     (h1
+       (font-size 2.5em)
+       (color ,bg-highlight)
+       (padding 0.5ex)
+       (border-radius 1px))
+
+     (h2
+       (font-size 2em)
+       (background-color ,bg-highlight)
+       (padding 0.5ex)
+       (border-radius 1px))
+
+     (h3
+       (font-size 1.6em)
+       (padding-bottom 0.3ex)
+       (border-bottom-width 1px)
+       (border-bottom-style solid)
+       (border-bottom-color ,secondary-content))
+
+     (h4
+       (font-size 1.4em))
+
+     (h5
+      (font-size 1.2em))
+
+     (h6
+       (font-size 1.1em))
+
+     (p
+       (margin-top 2ex)
+       (margin-bottom 2ex)
+       (line-height 3ex)
+       (text-align justify))
+
+     (a
+       (color ,blue))
+
+     ((ol ul)
+       (margin-bottom 0.2em)
+       (margin-top 0.2em)
+       (list-style-position inside))
+
+     (ul
+       (list-style-type circle))
+     (ol
+       (list-style-type lower-latin))
+     (li
+       (margin-left 1em)
+       (line-height 3ex)
+       )
+     (|#toc|
+       ((// ol)
+         (list-style-type upper-roman)))
+
+     ; Syntax highlighting in <pre/>
+     (pre
+       (font-family "\"Liberation Mono\", monospace")
+       (background-color ,bg-highlight)
+       (white-space pre-wrap))
+     ((= class "default") (color ,primary-content))
+     ((= class "symbol") (color ,cyan))
+     ((= class "string") (color ,green))
+     ((= class "paren1") (color ,yellow))
+     ((= class "paren2") (color ,violet))
+     ((= class "paren3") (color ,red))
+     ((= class "paren4") (color ,blue))
+     ((= class "paren5") (color ,orange))
+     ((= class "paren6") (color ,magenta))))
+
+; vi: set ft=scheme:

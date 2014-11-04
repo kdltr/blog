@@ -1,0 +1,6 @@
+((title . "Accueil")
+ (category . "index"))
+
+`(p "Salut! Ceci est mon Site!")
+
+; vi: set ft=scheme:

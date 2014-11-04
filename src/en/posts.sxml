@@ -1,0 +1,16 @@
+((title . "Posts")
+ (category . "posts"))
+
+`(nav
+   ,(intersperse
+      (map
+        (lambda (p)
+          `(
+             (p (a (@ (href ,(page-path p))) ,($ 'title p))
+                " (posted on " ,(format-seconds ($ 'date p)) ")")
+             (p ,($ 'abstract p))))
+        (all-posts))
+      '(hr))
+   )
+
+; vi: set ft=scheme:
