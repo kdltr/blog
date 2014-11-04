@@ -7,6 +7,7 @@
    (head
      (meta (@ (name viewport) (content "initial-scale=1.0")))
      (title ,(i18n-ref 'main-title) " - " ,($ 'title)))
+     (base (@ (href ,($ 'base-uri))))
    (body
      (header
        ,(i18n-ref 'main-title))
@@ -24,6 +25,14 @@
             ("Posts" . "Billets")
             ("Projects" . "Projets"))))
      (main
+       (nav
+         ,(let ((path (irregex-replace
+                        `(: bos "/" ,($ 'lang))
+                        (page-path)
+                        (i18n-cond "/fr" "/en"))))
+            (i18n-cond
+              `(a (@ (xml:lang fr) (href ,path)) "Version française")
+              `(a (@ (xml:lang en) (href ,path)) "English version"))))
        (article
          (h1 (@ (id ,(string-append ($ 'category) "-title"))) ,($ 'title))
          (inject ,contents)))

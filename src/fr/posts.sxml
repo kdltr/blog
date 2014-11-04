@@ -1,6 +1,14 @@
 ((title . "Billets")
  (category . "posts"))
 
-`(nav "Liens vers les billets")
+`(nav
+   ,(intersperse
+      (map
+        (lambda (p)
+          `((p (a (@ (href ,(page-path p))) ,($ 'title p))
+               " (posté le " ,(format-seconds ($ 'date p)) ")")
+             (p ,($ 'abstract p))))
+        (all-posts))
+      '(hr)))
 
 ; vi: set ft=scheme:

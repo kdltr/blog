@@ -5,12 +5,10 @@
    ,(intersperse
       (map
         (lambda (p)
-          `(
-             (p (a (@ (href ,(page-path p))) ,($ 'title p))
-                " (posted on " ,(format-seconds ($ 'date p)) ")")
-             (p ,($ 'abstract p))))
+          `((p (a (@ (href ,(page-path p))) ,($ 'title p))
+               " (posted on " ,(format-seconds ($ 'date p)) ")")
+            (p ,($ 'abstract p))))
         (all-posts))
-      '(hr))
-   )
+      '(hr)))
 
 ; vi: set ft=scheme:

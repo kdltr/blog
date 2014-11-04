@@ -83,12 +83,14 @@
        (border-top-style solid)
        (border-top-color ,secondary-content)
 
-       ((> *)
-         (max-width 40em)
-         (margin-left auto)
-         (margin-right auto))
+       ((> nav)
+         (text-align right))
 
        ((> article)
+         (max-width 40em)
+         (margin-left auto)
+         (margin-right auto)
+
          ((> aside)
            (margin-top -2.5ex)
            (margin-left 2ex)
@@ -188,7 +190,8 @@
        (text-align justify))
 
      (a
-       (color ,blue))
+       (color ,blue)
+       (text-decoration underline))
 
      ((ol ul)
        (margin-bottom 0.2em)

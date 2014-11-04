@@ -1,6 +1,0 @@
-((title . "Some Post")
- (date . 1415025372)
- (abstract "This is just another dummy post"))
-
-Some text inside the blog post.
-Have a snout: :3

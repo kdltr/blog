@@ -19,7 +19,8 @@
 (default-page-vars '(((* any)
                        (main-title ("en" . "Kooda’s burrow")
                                    ("fr" . "Le terrier de Kooda"))
-                       (base-uri . "http://www.upyum.com")
+                       ; (base-uri . "//localhost:8080/")
+                       (base-uri . "//www.upyum.com/")
                        (footer ("en" . ("Website generated with "
                                         (a (@ (href "http://wiki.call-cc.org/egg/hyde")) "Hyde") "."))
                                ("fr" . ("Site généré avec "
@@ -61,7 +62,10 @@
                  ")"))
 
 (define (format-seconds seconds)
-  (time->string (seconds->utc-time seconds) "%Y-%m-%d"))
+  (time->string (seconds->utc-time seconds)
+                (i18n-cond
+                  "%Y-%m-%d"
+                  "%d/%m/%Y")))
 
 (define (sort-by pages accessor)
   (sort pages (lambda (p1 p2) (> (accessor p1) (accessor p2)))))

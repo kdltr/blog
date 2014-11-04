@@ -1,14 +1,26 @@
 ()
 
 `((aside
-    (p "Page creation: " ,(format-seconds ($ 'date)))
-    (p "Last update: " ,(format-seconds
-                          (stat-modification-time
-                            (file-stat
-                              (string-append
-                                (source-dir) "/"
-                                (page-source-path))))))
-    (p "Estimated reading time: " "blerg"))
+    (p
+      ,(i18n-cond
+         "Page creation: "
+         "Page créée le ")
+      ,(format-seconds ($ 'date)))
+    (p
+      ,(i18n-cond
+         "Last update: "
+         "Dernière modification le ")
+      ,(format-seconds
+         (stat-modification-time
+           (file-stat
+             (string-append
+               (source-dir) "/"
+               (page-source-path))))))
+    (p
+      ,(i18n-cond
+         "Estimated reading time: "
+         "Estimation du temps de lecture : ")
+      "blerg"))
   ; TODO
   ; (nav (@ (id toc))
   ;   "Table of content")
