@@ -1,5 +1,6 @@
 ((title . "Test")
  (date . 1414616568)
+ (tags . ("test" "scheme" "c" "toto" "latin"))
  (abstract . "The first paragraph is the abstract of the post and will be extracted and put into the posts list/archive page along with the title."))
 
 

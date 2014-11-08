@@ -3,12 +3,12 @@
 `((aside
     (p
       ,(i18n-cond
-         "Page creation: "
-         "Page créée le ")
+         "Posted on "
+         "Publié le ")
       ,(format-seconds ($ 'date)))
     (p
       ,(i18n-cond
-         "Last update: "
+         "Last updated on "
          "Dernière modification le ")
       ,(format-seconds
          (stat-modification-time
@@ -20,7 +20,20 @@
       ,(i18n-cond
          "Estimated reading time: "
          "Estimation du temps de lecture : ")
-      "blerg"))
+      ,(reading-time (page-source-path)))
+    (p
+      "Tags" ,(i18n-cond ": " " : ")
+      ,(intersperse
+         (map
+           (lambda (t)
+             `(a (@ (href ,(string-append
+                             "/"
+                             ($ 'lang)
+                             "/tags.xhtml#tag-"
+                             (pathify t))))
+                 ,t))
+           (sort ($ 'tags) string<?))
+         #\space)))
   ; TODO
   ; (nav (@ (id toc))
   ;   "Table of content")

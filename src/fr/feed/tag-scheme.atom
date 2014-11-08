@@ -1,0 +1,10 @@
+((title . "Le terrier de Kooda")
+ (subtitle . "flux des billets liés à scheme")
+ (authors "Kooda")
+ (date . "2014-11-08")
+ (tag . "tag:www.upyum.com,~A:~A"))
+
+(pages->atom-doc (reverse (pages-tagged "scheme"))
+                 page-date->rfc3339-string:
+                 (lambda (s)
+                   (rfc3339->string (seconds->rfc3339 s))))

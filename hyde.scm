@@ -1,8 +1,31 @@
-(use base64
+(use anaphora
+     base64
      hyde
+     hyde-atom
      posix
      posix-extras
+     srfi-1
      srfi-18)
+
+; Todo list:
+; * Tag atom feeds
+; * Navigation links in posts
+; * Table of content generation in posts
+; * Posts archive page
+; * Gallery-like history for the drawings page
+;
+; Done:
+; * Latest posts in posts.xhtml
+; * More color contrast
+; * Language links and language-independent URLs
+; * I18n of the remaining elements
+; * Try out the new versions of Hyde and SCSS
+; * Estimation of reading time
+; * Hide other (empty) pages for now
+; * Tagging system
+; * Atom feeds
+
+(load "hyde-for-new-scss")
 
 (set! sxml-conversion-rules
   (cons `(*PI* *preorder* . ,(lambda (tag args)
@@ -20,7 +43,7 @@
                        (main-title ("en" . "Kooda’s burrow")
                                    ("fr" . "Le terrier de Kooda"))
                        ; (base-uri . "//localhost:8080/")
-                       (base-uri . "//www.upyum.com/")
+                       (base-uri . "//www.upyum.com")
                        (footer ("en" . ("Website generated with "
                                         (a (@ (href "http://wiki.call-cc.org/egg/hyde")) "Hyde") "."))
                                ("fr" . ("Site généré avec "
@@ -67,6 +90,19 @@
                   "%Y-%m-%d"
                   "%d/%m/%Y")))
 
+(define (page-content source-path)
+  (with-input-from-file (string-append "src/" source-path)
+    (lambda ()
+      (read)
+      (read-string))))
+
+(define (reading-time path)
+  (let ((time (inexact->exact
+                (ceiling (/ (length (string-split (page-content path))) 150)))))
+    `(,time
+       " "
+      ,(if (< time 2) "minute" "minutes"))))
+
 (define (sort-by pages accessor)
   (sort pages (lambda (p1 p2) (> (accessor p1) (accessor p2)))))
 
@@ -78,8 +114,29 @@
   (sort-by (pages-matching `(: ,($ 'lang) "/post/" (+ any) ".wiki"))
            (cut $ 'date <>)))
 
-(for-each
-  (lambda (binding)
-    (apply environment-extend! (cons (page-eval-env) binding)))
-  `((all-posts ,all-posts)))
+(define (page-tags page)
+  (map
+    (lambda (tag)
+      (cons tag page))
+    ($ 'tags page)))
 
+(define (all-tags)
+  (fold
+    (lambda (tag alist)
+      (aif (alist-ref (car tag) alist string=?)
+        (alist-cons (car tag)
+                    (cons (cdr tag) it)
+                    (alist-delete (car tag) alist string=?))
+        (alist-cons (car tag)
+                    (list (cdr tag))
+                    alist)))
+    '()
+    (append-map page-tags (all-posts))))
+
+(define (pages-tagged tag)
+  (alist-ref tag (all-tags) string=?))
+
+; (for-each
+;   (lambda (binding)
+;     (apply environment-extend! (cons (page-eval-env) binding)))
+;   `((all-posts ,all-posts)))

@@ -6,8 +6,9 @@
            (xml:lang ,($ 'lang)))
    (head
      (meta (@ (name viewport) (content "initial-scale=1.0")))
-     (title ,(i18n-ref 'main-title) " - " ,($ 'title)))
-     (base (@ (href ,($ 'base-uri))))
+     (title ,(i18n-ref 'main-title) " - " ,($ 'title))
+     ; (base (@ (href ,($ 'base-uri))))
+     )
    (body
      (header
        ,(i18n-ref 'main-title))
@@ -20,10 +21,11 @@
             (i18n-cond
               (menu-link (car p) (car p))
               (menu-link (cdr p) (car p))))
-          '(("Drawings" . "Dessins")
-            ("Music" . "Musique")
-            ("Posts" . "Billets")
-            ("Projects" . "Projets"))))
+          '(("Posts" . "Billets")
+            ; ("Projects" . "Projets")
+            ; ("Drawings" . "Dessins")
+            ; ("Music" . "Musique")
+            )))
      (main
        (nav
          ,(let ((path (irregex-replace

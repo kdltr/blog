@@ -1,5 +1,6 @@
 ((title . "Test")
  (date . 1414616568)
+ (tags . ("test" "blabla"))
  (abstract . "Petit test de billet en français."))
 
 == Blablabla

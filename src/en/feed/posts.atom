@@ -1,0 +1,10 @@
+((title . "Kooda's burrow")
+ (subtitle . "main atom feed")
+ (authors "Kooda")
+ (date . "2014-11-08")
+ (tag . "tag:www.upyum.com,~A:~A"))
+
+(pages->atom-doc (reverse (all-posts))
+                 page-date->rfc3339-string:
+                 (lambda (s)
+                   (rfc3339->string (seconds->rfc3339 s))))
