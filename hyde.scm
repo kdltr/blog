@@ -2,10 +2,12 @@
      base64
      hyde
      hyde-atom
+     lowdown
      posix
      posix-extras
      srfi-1
-     srfi-18)
+     srfi-18
+     sxml-transforms)
 
 ; Todo list:
 ; * Tag atom feeds
@@ -35,6 +37,13 @@
                                              (string-join (cdr args))
                                              "?>\n")))
         sxml-conversion-rules))
+
+(define (translate/md)
+  (SRV:send-reply (pre-post-order* (markdown->sxml) sxml-conversion-rules)))
+
+(translators
+  (cons (list "md" translate/md)
+        (translators)))
 
 
 (define $ (environment-ref (page-eval-env) '$))
@@ -111,7 +120,7 @@
                    ((environment-ref (page-eval-env) 'pages)))))
 
 (define (all-posts)
-  (sort-by (pages-matching `(: ,($ 'lang) "/post/" (+ any) ".wiki"))
+  (sort-by (pages-matching `(: ,($ 'lang) "/post/" (+ any)))
            (cut $ 'date <>)))
 
 (define (page-tags page)
