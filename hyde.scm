@@ -9,25 +9,25 @@
      srfi-18
      sxml-transforms)
 
-; Todo list:
-; * Tag atom feeds
-; * Navigation links in posts
-; * Table of content generation in posts
-; * Posts archive page
-; * Gallery-like history for the drawings page
-;
-; Done:
-; * Latest posts in posts.xhtml
-; * More color contrast
-; * Language links and language-independent URLs
-; * I18n of the remaining elements
-; * Try out the new versions of Hyde and SCSS
-; * Estimation of reading time
-; * Hide other (empty) pages for now
-; * Tagging system
-; * Atom feeds
+;; Todo list:
+;; * Tag atom feeds
+;; * Navigation links in posts
+;; * Table of content generation in posts
+;; * Posts archive page
+;; * Gallery-like history for the drawings page
+;;
+;; Done:
+;; * Latest posts in posts.xhtml
+;; * More color contrast
+;; * Language links and language-independent URLs
+;; * I18n of the remaining elements
+;; * Try out the new versions of Hyde and SCSS
+;; * Estimation of reading time
+;; * Hide other (empty) pages for now
+;; * Tagging system
+;; * Atom feeds
 
-(load "hyde-for-new-scss")
+;; (load "hyde-for-new-scss")
 
 (set! sxml-conversion-rules
   (cons `(*PI* *preorder* . ,(lambda (tag args)
@@ -38,8 +38,18 @@
                                              "?>\n")))
         sxml-conversion-rules))
 
+(define markdown-transforms-rules
+  `((heading . ,(lambda (tag args)
+                  (append (list tag (+ 1 (car args))) (cdr args))))
+    (*text* . ,(lambda (tag args) args))
+    (*default* . ,(lambda (tag args) (cons tag args)))))
+
 (define (translate/md)
-  (SRV:send-reply (pre-post-order* (markdown->sxml) sxml-conversion-rules)))
+  (let* ((input-md (markdown->sxml*))
+         (transformed-md (pre-post-order* input-md markdown-transforms-rules))
+         (html-md (markdown-sxml->html-sxml transformed-md))
+         (html-output (pre-post-order* html-md sxml-conversion-rules)))
+    (SRV:send-reply html-output)))
 
 (translators
   (cons (list "md" translate/md)
