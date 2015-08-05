@@ -1,6 +1,0 @@
-((title . "Drawings")
- (category . "drawings"))
-
-`(p "Some drawings :o")
-
-; vi: set ft=scheme:

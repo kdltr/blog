@@ -1,6 +1,0 @@
-((title . "Music")
- (category . "music"))
-
-`(p "Sounds! \\o/")
-
-; vi: set ft=scheme:

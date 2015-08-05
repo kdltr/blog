@@ -1,6 +1,7 @@
 ()
 
-`((aside
+`(;;,(generate-post-nav)
+  (aside
     (p
       ,(i18n-cond
          "Posted on "
@@ -19,25 +20,12 @@
     (p
       ,(i18n-cond
          "Estimated reading time: "
-         "Estimation du temps de lecture : ")
-      ,(reading-time (page-source-path)))
-    (p
-      "Tags" ,(i18n-cond ": " " : ")
-      ,(intersperse
-         (map
-           (lambda (t)
-             `(a (@ (href ,(string-append
-                             "/"
-                             ($ 'lang)
-                             "/tags.xhtml#tag-"
-                             (pathify t))))
-                 ,t))
-           (sort ($ 'tags) string<?))
-         #\space)))
-  ; TODO
-  ; (nav (@ (id toc))
-  ;   "Table of content")
+         "Temps de lecture estimé : ")
+      ,(reading-time (page-source-path))))
+  ;; TODO
+  ;; (nav (@ (id toc))
+  ;;   "Table of content")
   (p ,($ 'abstract))
   (inject ,contents))
 
-; vi: set ft=scheme:
+;; vi: set ft=scheme:

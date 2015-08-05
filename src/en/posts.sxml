@@ -1,8 +1,9 @@
 ((title . "Posts")
  (category . "posts"))
 
-`((aside (p (a (@ (href "/en/tags.xhtml")) "tags list"))
-         (p (a (@ (href "/en/feed/posts.atom")) "atom feed")))
+`((aside
+   ;;(p (a (@ (href "/en/tags.xhtml")) "tags list"))
+   (p (a (@ (href "/en/feed/posts.atom")) "atom feed")))
   (nav
    ,(intersperse
       (map

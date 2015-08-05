@@ -1,6 +1,0 @@
-((title . "Projets")
- (category . "projects"))
-
-`(p "Projets logiciel ~o~")
-
-; vi: set ft=scheme:

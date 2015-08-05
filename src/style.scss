@@ -6,13 +6,8 @@
        (base0     "#839496") ; dark primary content
        (base1     "#93a1a1") ; light secondary content / dark optional emphasized content
        (base2     "#eee8d5") ; light background highlights
-;;       (base3     "#fdfaf1") ; light background (default #fdf6e3)
-       (base3     "#ffffff") ; light background (default #fdf6e3)
-       (bg base3)
-       (bg-highlight base2)
-       (secondary-content base1)
-       (primary-content base00)
-       (optional-content base01)
+       (base3     "#fdfaf1") ; light background (default #fdf6e3)
+       (white     "#ffffff")
        (yellow    "#b58900")
        (orange    "#cb4b16")
        (red       "#dc322f")
@@ -21,11 +16,23 @@
        (blue      "#268bd2")
        (cyan      "#2aa198")
        (green     "#859900")
+       (serif-font "\"Liberation Serif\", serif")
+       (sans-font  "\"Liberation Sans\", sans-serif")
+       (mono-font  "\"Liberation Mono\", monospace")
+
+       (bg white)
+       (bg-highlight base2)
+       (secondary-content base1)
+       (primary-content base00)
+       (optional-content base01)
        (index-color red)
        (drawings-color cyan)
        (music-color violet)
        (posts-color yellow)
-       (projects-color green))
+       (projects-color green)
+       (navigation-font sans-font)
+       (content-font sans-font)
+       (code-font mono-font))
   `(css+
 
      ,@(call-with-input-file "resources/reset.scss" read)
@@ -33,8 +40,8 @@
      (body
        (background-color ,bg)
        (color ,primary-content)
-       (font-family "\"Liberation Sans\", sans-serif")
-       (font-size 14pt)
+       (font-family ,navigation-font)
+       (font-size 12pt)
        (max-width 50em)
        (margin-left auto)
        (margin-right auto)
@@ -79,7 +86,7 @@
          (color ,secondary-content)))
 
      (main
-       (font-family "\"Liberation Serif\", serif")
+       (font-family ,content-font)
        (clear both)
        (border-top-width 1px)
        (border-top-style solid)
@@ -104,113 +111,128 @@
              (line-height 2.5ex)
              (margin-top 0)
              (margin-bottom 0)
-             (text-align right)))
+             (text-align right)))))
 
-         ((> nav)
-           ((> p)
-             ((> a)
-              (font-size 1.5em))))))
-
-     (|#index-link|
+     (|#posts-link|
        (color ,index-color)
        (((& :hover) (& |.selected|))
          (border-color ,index-color)
          (color ,bg-highlight)
          (background-color ,index-color)))
-     (|#index-title|
+     (|#posts-title|
        (background-color ,index-color))
-     (|#posts-link|
+     (|#index-link|
        (color ,posts-color)
        (((& :hover) (& |.selected|))
          (border-color ,posts-color)
          (color ,bg-highlight)
          (background-color ,posts-color)))
-     (|#posts-title|
+     (|#index-title|
        (background-color ,posts-color))
+     #;
      (|#drawings-link|
-       (color ,drawings-color)
-       (((& :hover) (& |.selected|))
-         (border-color ,drawings-color)
-         (color ,bg-highlight)
-         (background-color ,drawings-color)))
+     (color ,drawings-color)
+     (((& :hover) (& |.selected|))
+     (border-color ,drawings-color)
+     (color ,bg-highlight)
+     (background-color ,drawings-color)))
+     #;
      (|#drawings-title|
-       (background-color ,drawings-color))
+     (background-color ,drawings-color))
+     #;
      (|#music-link|
-       (color ,music-color)
-       (((& :hover) (& |.selected|))
-         (border-color ,music-color)
-         (color ,bg-highlight)
-         (background-color ,music-color)))
+     (color ,music-color)
+     (((& :hover) (& |.selected|))
+     (border-color ,music-color)
+     (color ,bg-highlight)
+     (background-color ,music-color)))
+     #;
      (|#music-title|
-       (background-color ,music-color))
+     (background-color ,music-color))
+     #;
      (|#projects-link|
-       (color ,projects-color)
-       (((& :hover) (& |.selected|))
-         (border-color ,projects-color)
-         (color ,bg-highlight)
-         (background-color ,projects-color)))
+     (color ,projects-color)
+     (((& :hover) (& |.selected|))
+     (border-color ,projects-color)
+     (color ,bg-highlight)
+     (background-color ,projects-color)))
+     #;
      (|#projects-title|
-       (background-color ,projects-color))
+     (background-color ,projects-color))
 
+     #;
+     (|#previous-link|
+     (text-align right))
+     #;
+     (|#next-link|
+     (text-align right))
+     
      ((h1 h2 h3 h4 h5 h6)
-       (color ,optional-content)
-       (margin-bottom 1ex)
-       (margin-top 2ex))
+      (color ,optional-content)
+      (margin-bottom 1ex)
+      (margin-top 2ex))
 
      (h1
-       (font-size 2.5em)
-       (color ,bg-highlight)
-       (padding 0.5ex)
-       (border-radius 1px))
+      (font-size 2.5em)
+      (color ,bg-highlight)
+      (padding 0.5ex)
+      (border-radius 1px))
 
      (h2
-       (font-size 2em)
-       (padding-bottom 0.5ex)
-       (border-bottom-width 1px)
-       (border-bottom-style solid)
-       (border-bottom-color ,secondary-content))
+      (font-size 2em)
+      (padding-bottom 0.5ex)
+      (border-bottom-width 1px)
+      (border-bottom-style solid)
+      (border-bottom-color ,secondary-content))
 
      (h3
-       (font-size 1.8em))
+      (font-size 1.8em))
 
      (h4
-       (font-size 1.6em))
+      (font-size 1.6em))
 
      (h5
       (font-size 1.4em))
 
      (p
-       (margin-top 2ex)
-       (margin-bottom 2ex)
-       (line-height 3ex)
-       (text-align justify))
+      (margin-top 2ex)
+      (margin-bottom 2ex)
+      (line-height 3ex)
+      (text-align justify))
 
      (a
-       (color ,blue)
-       (text-decoration underline))
+      (color ,blue)
+      (text-decoration underline))
 
      ((ol ul)
-       (margin-bottom 0.2em)
-       (margin-top 0.2em)
-       (list-style-position inside))
+      (margin-bottom 0.2em)
+      (margin-top 0.2em)
+      (list-style-position inside))
 
      (ul
-       (list-style-type circle))
+      (list-style-type circle))
      (ol
-       (list-style-type lower-latin))
+      (list-style-type lower-latin))
      (li
-       (margin-left 1em)
-       (line-height 3ex)
-       )
-     (|#toc|
-       ((// ol)
-         (list-style-type upper-roman)))
+      (margin-left 1em)
+      (line-height 3ex))
 
-     ; Syntax highlighting in <pre/>
+     (em
+      (font-style italic))
+
+     (strong
+      (font-weight bold))
+     
+     #;
+     (|#toc|
+     ((// ol)
+     (list-style-type upper-roman)))
+
+     ;; Syntax highlighting in <pre/>
      (pre
-       (font-family "\"Liberation Mono\", monospace")
-       (background-color ,bg-highlight)
-       (white-space pre-wrap))
+      (font-family ,code-font)
+      (background-color ,bg-highlight)
+      (white-space pre-wrap))
      ((= class "default") (color ,primary-content))
      ((= class "symbol") (color ,cyan))
      ((= class "string") (color ,green))

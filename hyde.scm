@@ -79,8 +79,8 @@
 
 (define (i18n-cond en fr)
   (if (string=? ($ 'lang) "en")
-    en
-    fr))
+      en
+      fr))
 
 (define (i18n-ref var)
   (alist-ref ($ 'lang) ($ var) string=?))
@@ -100,14 +100,14 @@
                  mime
                  ";base64,"
                  (base64-encode
-                   (call-with-input-file path (cut read-string #f <>)))
+                  (call-with-input-file path (cut read-string #f <>)))
                  ")"))
 
 (define (format-seconds seconds)
   (time->string (seconds->utc-time seconds)
                 (i18n-cond
-                  "%Y-%m-%d"
-                  "%d/%m/%Y")))
+                 "%Y-%m-%d"
+                 "%d/%m/%Y")))
 
 (define (page-content source-path)
   (with-input-from-file (string-append "src/" source-path)
@@ -117,9 +117,9 @@
 
 (define (reading-time path)
   (let ((time (inexact->exact
-                (ceiling (/ (length (string-split (page-content path))) 150)))))
+               (ceiling (/ (length (string-split (page-content path))) 150)))))
     `(,time
-       " "
+      " "
       ,(if (< time 2) "minute" "minutes"))))
 
 (define (sort-by pages accessor)
@@ -133,29 +133,32 @@
   (sort-by (pages-matching `(: ,($ 'lang) "/post/" (+ any)))
            (cut $ 'date <>)))
 
-(define (page-tags page)
-  (map
-    (lambda (tag)
-      (cons tag page))
-    ($ 'tags page)))
+(define (post-previous-and-next post)
+  (let loop ((posts (all-posts))
+             (next '()))
+    (if (equal? post (car posts))
+        (values (cdr posts) next)
+        (loop (cdr posts)
+              (cons (car posts) next)))))
 
-(define (all-tags)
-  (fold
-    (lambda (tag alist)
-      (aif (alist-ref (car tag) alist string=?)
-        (alist-cons (car tag)
-                    (cons (cdr tag) it)
-                    (alist-delete (car tag) alist string=?))
-        (alist-cons (car tag)
-                    (list (cdr tag))
-                    alist)))
-    '()
-    (append-map page-tags (all-posts))))
-
-(define (pages-tagged tag)
-  (alist-ref tag (all-tags) string=?))
-
-; (for-each
-;   (lambda (binding)
-;     (apply environment-extend! (cons (page-eval-env) binding)))
-;   `((all-posts ,all-posts)))
+(define (generate-post-nav)
+  (let-values (((previous next) (post-previous-and-next (current-page))))
+    `(nav
+      (p
+       ,(if (null? previous)
+            '()
+            `(a (@ (href ,(page-path (car previous)))
+                   (id previous-link))
+                ,(i18n-cond
+                  "Previous post: "
+                  "Billet précédent : ")
+                ,($ 'title (car previous))))
+       (br)
+       ,(if (null? next)
+            '()
+            `(a (@ (href ,(page-path (car next)))
+                   (id next-link))
+                ,(i18n-cond
+                  "Next post: "
+                  "Billet suivant : ")
+                ,($ 'title (car next))))))))

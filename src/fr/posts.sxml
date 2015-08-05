@@ -1,8 +1,9 @@
 ((title . "Billets")
  (category . "posts"))
 
-`((aside (p (a (@ (href "/fr/tags.xhtml")) "liste des tags"))
-         (p (a (@ (href "/fr/feed/posts.atom")) "flux atom")))
+`((aside
+   ;;(p (a (@ (href "/fr/tags.xhtml")) "liste des tags"))
+   (p (a (@ (href "/fr/feed/posts.atom")) "flux atom")))
   (nav
    ,(intersperse
       (map

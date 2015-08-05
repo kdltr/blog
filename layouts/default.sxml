@@ -13,9 +13,6 @@
      (header
        ,(i18n-ref 'main-title))
      (nav
-       ,(i18n-cond
-          (menu-link "Home" "index" "index")
-          (menu-link "Accueil" "index" "index"))
        ,(map
           (lambda (p)
             (i18n-cond
@@ -25,7 +22,10 @@
             ;; ("Projects" . "Projets")
             ;; ("Drawings" . "Dessins")
             ;; ("Music" . "Musique")
-            )))
+            ))
+       ,(i18n-cond
+          (menu-link "About" "index" "index")
+          (menu-link "À propos" "index" "index")))
      (main
        (nav
          ,(let ((path (irregex-replace
