@@ -3,8 +3,8 @@
 
 Bienvenue !
 
-Vous venez de tomber, probablement par accident, sur mon petit web
-personnel.
+Vous venez de tomber, probablement par accident, sur mon petit site
+web personnel.
 
 Je suis Adrien Ramos, aussi connu comme Kooda sur l’Internet (et
 parfois ailleurs). Je suis un passionné de technologie et de logiciel
