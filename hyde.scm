@@ -132,33 +132,3 @@
 (define (all-posts)
   (sort-by (pages-matching `(: ,($ 'lang) "/post/" (+ any)))
            (cut $ 'date <>)))
-
-(define (post-previous-and-next post)
-  (let loop ((posts (all-posts))
-             (next '()))
-    (if (equal? post (car posts))
-        (values (cdr posts) next)
-        (loop (cdr posts)
-              (cons (car posts) next)))))
-
-(define (generate-post-nav)
-  (let-values (((previous next) (post-previous-and-next (current-page))))
-    `(nav
-      (p
-       ,(if (null? previous)
-            '()
-            `(a (@ (href ,(page-path (car previous)))
-                   (id previous-link))
-                ,(i18n-cond
-                  "Previous post: "
-                  "Billet précédent : ")
-                ,($ 'title (car previous))))
-       (br)
-       ,(if (null? next)
-            '()
-            `(a (@ (href ,(page-path (car next)))
-                   (id next-link))
-                ,(i18n-cond
-                  "Next post: "
-                  "Billet suivant : ")
-                ,($ 'title (car next))))))))
