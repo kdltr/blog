@@ -11,7 +11,7 @@ parfois ailleurs). Je suis un passionné de technologie et de logiciel
 libre.
 
 Vous pouvez [aller lire mon blog][blog] si le cœur vous en dit. Sinon,
-vous pouvez toujours passez votre chemin et aller regarder quelques
+vous pouvez toujours passer votre chemin et aller regarder quelques
 [photos de loutres][dailyotter].
 
 Je suis disponible au travers de mon auto-entreprise si vous avez

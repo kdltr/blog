@@ -3,14 +3,14 @@
 
 Welcome!
 
-You just stumbled upon, probably by accident, on my little personal
+You just stumbled upon, probably by accident, my little personal
 website.
 
 I’m Adrien Ramos, also known as Kooda on the Internet (and sometimes
 elsewhere). I’m a technology and libre software enthusiast.
 
-You can go [read my blog][blog] if you feel like doing so. Otherwise
-you can always go on your way and watch some [otter pictures][dailyotter].
+You can [read my blog][blog] if you feel like doing so. Otherwise you
+can always go on your way and watch some [otter pictures][dailyotter].
 
 I’m also available as a freelancer if you need a developper or a
 teacher, do not hesitate to contact me.
