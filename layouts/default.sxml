@@ -19,7 +19,7 @@
               (menu-link (car p) (car p))
               (menu-link (cdr p) (car p))))
           '(("Posts" . "Billets")
-            ;; ("Projects" . "Projets")
+            ("Projects" . "Projets")
             ;; ("Drawings" . "Dessins")
             ;; ("Music" . "Musique")
             ))
