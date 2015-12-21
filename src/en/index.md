@@ -12,7 +12,7 @@ elsewhere). I’m a technology and libre software enthusiast.
 You can [read my blog][blog] if you feel like doing so. Otherwise you
 can always go on your way and watch some [otter pictures][dailyotter].
 
-I’m also available as a freelancer if you need a developper or a
+I’m also available as a freelancer if you need a developer or a
 teacher, do not hesitate to contact me.
 
 
