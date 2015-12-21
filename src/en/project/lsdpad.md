@@ -20,6 +20,7 @@ Screenshots
 ===========
 
 [<img alt="LSDPad screenshot" width="100%" style="border:1px solid lightgray" src="/projects/lsdpad/screenshot1.png"/>](/projects/lsdpad/screenshot1.png)
+
 [<img alt="LSDPad screenshot" width="100%" style="border:1px solid lightgray" src="/projects/lsdpad/screenshot2.png"/>](/projects/lsdpad/screenshot2.png)
 
 
