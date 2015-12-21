@@ -12,6 +12,7 @@ Il a été publié sur Itch.io le 19 octobre 2015 à l’adresse suivante :
 [https://kooda.itch.io/perception-saga](http://kooda.itch.io/perception-saga)
 
 Perception Saga est une étrange aventure synesthésique dans un monde de sons et effets visuels abstraits.
+Il est également accessible aux personnes soufrant d'un handicap visuel ou auditif.
 
 Ce jeu est un prototype de game jam, il ne contient donc que 3 niveaux de difficulté progressive.
 
