@@ -6,6 +6,8 @@ Perception Saga is my very first game jam project.
 It was done for the [Global Game Jam 2014][ggj] with [Jobastre],
 see the [related submission].
 
+The theme of this edition was “We don’t see things as they are, we see them as we are.”
+
 It has been released on Itch.io at
 [https://kooda.itch.io/perception-saga](http://kooda.itch.io/perception-saga)
 
