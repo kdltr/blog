@@ -27,9 +27,9 @@
        (optional-content base01)
        (index-color red)
        (drawings-color cyan)
-       (music-color violet)
+       (music-color green)
        (posts-color yellow)
-       (projects-color green)
+       (projects-color violet)
        (navigation-font sans-font)
        (content-font sans-font)
        (code-font mono-font))
@@ -149,16 +149,15 @@
      #;
      (|#music-title|
      (background-color ,music-color))
-     #;
      (|#projects-link|
-     (color ,projects-color)
-     (((& :hover) (& |.selected|))
-     (border-color ,projects-color)
-     (color ,bg-highlight)
-     (background-color ,projects-color)))
-     #;
+      (color ,projects-color)
+      (((& :hover) (& |.selected|))
+       (border-color ,projects-color)
+       (color ,bg-highlight)
+       (background-color ,projects-color)))
+
      (|#projects-title|
-     (background-color ,projects-color))
+      (background-color ,projects-color))
 
      #;
      (|#previous-link|
