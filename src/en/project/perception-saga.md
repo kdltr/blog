@@ -8,7 +8,7 @@ see the [related submission].
 
 The theme of this edition was “We don’t see things as they are, we see them as we are.”
 
-It has been released on Itch.io at
+It has been released on the 19th of October 2015 on Itch.io at
 [https://kooda.itch.io/perception-saga](http://kooda.itch.io/perception-saga)
 
 Perception Saga is a strange synesthetic adventure to a land of abstract sounds and visual effects.

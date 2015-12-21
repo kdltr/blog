@@ -7,7 +7,8 @@ This game has been done in the context of teaching Scheme to my intern in Decemb
 
 The graphics and music have been made by [Reptifur][reptifur].
 
-It has been released on the Itch.io platform at: [https://kooda.itch.io/cphys2015](https://kooda.itch.io/cphys2015)
+It has been released on the 17th of december 2015 on the Itch.io platform at:
+[https://kooda.itch.io/cphys2015](https://kooda.itch.io/cphys2015)
 
 It’s the very first polished game I ever made, and the very first completed game I made using CHICKEN Scheme.
 

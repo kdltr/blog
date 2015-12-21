@@ -7,7 +7,7 @@ Ce jeu a été créé avec comme contexte l’enseignement de Scheme à mon stag
 
 Les graphismes et la musique ont été réalisés par [Reptifur][reptifur].
 
-Le jeu a été publié sur la plate-forme Itch.io à cette adresse:
+Le jeu a été publié le 17 décembre 2015 sur la plate-forme Itch.io à cette adresse:
 [https://kooda.itch.io/cphys2015](https://kooda.itch.io/cphys2015)
 
 C’est le premier jeu bien travaillé que j’ai produit,

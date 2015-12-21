@@ -8,7 +8,7 @@ voir [la publication originale][related submission] (en anglais).
 
 Le thème de cette édition était “We don’t see things as they are, we see them as we are.”
 
-Il a été publié sur Itch.io à l’adresse suivante : 
+Il a été publié sur Itch.io le 19 octobre 2015 à l’adresse suivante :
 [https://kooda.itch.io/perception-saga](http://kooda.itch.io/perception-saga)
 
 Perception Saga est une étrange aventure synesthésique dans un monde de sons et effets visuels abstraits.
