@@ -28,13 +28,16 @@
 ;; * Atom feeds
 
 (set! sxml-conversion-rules
-  (cons `(*PI* *preorder* . ,(lambda (tag args)
-                              (string-append "<?"
-                                             (symbol->string (car args))
-                                             " "
-                                             (string-join (cdr args))
-                                             "?>\n")))
-        sxml-conversion-rules))
+  (cons* `(*PI* *preorder* . ,(lambda (tag args)
+                                (string-append "<?"
+                                               (symbol->string (car args))
+                                               " "
+                                               (string-join (cdr args))
+                                               "?>\n")))
+         `(*COMMENT* *preorder* .
+                     ,(lambda (tag args)
+                        ""))
+         sxml-conversion-rules))
 
 (define markdown-transforms-rules
   `((heading . ,(lambda (tag args)
