@@ -22,9 +22,9 @@ Il est recommandé de jouer dans un environnement calme, muni de bons écouteurs
 Captures d’écran
 ================
 
-[<img alt="Perception-Saga screenshot" width="100%" src="/projects/perception-saga/screenshot1.png"/>](/projects/perception-saga/screenshot1.png)
+[<img alt="Perception-Saga screenshot" style="width:100%" src="/projects/perception-saga/screenshot1.png"/>](/projects/perception-saga/screenshot1.png)
 
-[<img alt="Perception-Saga screenshot" width="100%" src="/projects/perception-saga/screenshot2.png"/>](/projects/perception-saga/screenshot2.png)
+[<img alt="Perception-Saga screenshot" style="width:100%" src="/projects/perception-saga/screenshot2.png"/>](/projects/perception-saga/screenshot2.png)
 
 Technologies
 ============
@@ -44,7 +44,7 @@ Oujevipo a écrit un [billet de blog][a blog post] sur Perception Saga.
 Téléchargements
 ===============
 
-<iframe src="https://itch.io/embed/40258" width="552" height="167" frameborder="0"/>
+<iframe src="https://itch.io/embed/40258" width="552" height="167" style="border:0"/>
 
 
 Code source

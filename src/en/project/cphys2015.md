@@ -18,13 +18,13 @@ It has been a very pleasant experience, it took approximately a month to build.
 Screenshots
 ===========
 
-[<img alt="Crepes-party-hard-yolo-swag 2015 screenshot" width="100%" src="/projects/cphys2015/screenshot1.png"/>]
+[<img alt="Crepes-party-hard-yolo-swag 2015 screenshot" style="width:100%" src="/projects/cphys2015/screenshot1.png"/>]
 (/projects/cphys2015/screenshot1.png)
 
-[<img alt="Crepes-party-hard-yolo-swag 2015 screenshot" width="100%" src="/projects/cphys2015/screenshot2.png"/>]
+[<img alt="Crepes-party-hard-yolo-swag 2015 screenshot" style="width:100%" src="/projects/cphys2015/screenshot2.png"/>]
 (/projects/cphys2015/screenshot2.png)
 
-<video width="100%" controls="controls">
+<video style="width:100%" controls="controls">
     <source src="/projects/cphys2015/video.webm" type="video/webm"/>
     <source src="/projects/cphys2015/video.mp4" type="video/mp4"/>
 </video>
@@ -45,13 +45,13 @@ Press
 
 [Auroz à l’envers][auroz] talked about the game in one of his videos (in french):
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CAhsxDl27pk" frameborder="0" allowfullscreen="allowfullscreen"/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CAhsxDl27pk" style="border:0" allowfullscreen="allowfullscreen"/>
 
 
 Downloads
 =========
 
-<iframe src="https://itch.io/embed/47359" width="552" height="167" frameborder="0"/>
+<iframe src="https://itch.io/embed/47359" width="552" height="167" style="border:0"/>
 
 
 Source code

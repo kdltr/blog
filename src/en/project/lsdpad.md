@@ -19,9 +19,9 @@ The goal of this odd toy is to find as many of the achievements it proposes as p
 Screenshots
 ===========
 
-[<img alt="LSDPad screenshot" width="100%" style="border:1px solid lightgray" src="/projects/lsdpad/screenshot1.png"/>](/projects/lsdpad/screenshot1.png)
+[<img alt="LSDPad screenshot" style="border:1px solid lightgray;width:100%" src="/projects/lsdpad/screenshot1.png"/>](/projects/lsdpad/screenshot1.png)
 
-[<img alt="LSDPad screenshot" width="100%" style="border:1px solid lightgray" src="/projects/lsdpad/screenshot2.png"/>](/projects/lsdpad/screenshot2.png)
+[<img alt="LSDPad screenshot" style="border:1px solid lightgray;width:100%" src="/projects/lsdpad/screenshot2.png"/>](/projects/lsdpad/screenshot2.png)
 
 
 Technologies
