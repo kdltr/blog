@@ -27,8 +27,6 @@
 ;; * Tagging system
 ;; * Atom feeds
 
-;; (load "hyde-for-new-scss")
-
 (set! sxml-conversion-rules
   (cons `(*PI* *preorder* . ,(lambda (tag args)
                               (string-append "<?"
