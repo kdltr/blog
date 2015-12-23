@@ -3,7 +3,7 @@
 
 ![Crepes-party-hard-yolo-swag 2015 logo](/projects/cphys2015/logo.png)
 
-Ce jeu a été créé avec comme contexte l’enseignement de Scheme à mon stagiaire en Décembre 2015.
+Ce jeu a été créé à l’occasion de l’enseignement de Scheme à mon stagiaire en Décembre 2015.
 
 Les graphismes et la musique ont été réalisés par [Reptifur][reptifur].
 
