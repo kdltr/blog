@@ -228,7 +228,8 @@
      (list-style-type upper-roman)))
 
      ;; Syntax highlighting in <pre/>
-     (pre
+     (code
+      (display block)
       (font-family ,code-font)
       (background-color ,bg-highlight)
       (white-space pre-wrap))
@@ -240,6 +241,9 @@
      ((= class "paren3") (color ,red))
      ((= class "paren4") (color ,blue))
      ((= class "paren5") (color ,orange))
-     ((= class "paren6") (color ,magenta))))
+     ((= class "paren6") (color ,magenta))
+
+     ;; Article-wide images
+     ((= class "fill") (width 100%))))
 
 ; vi: set ft=scheme:
