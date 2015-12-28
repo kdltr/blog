@@ -1,11 +1,14 @@
 (use anaphora
      base64
+     colorize
+     html-parser
      hyde
      hyde-atom
      lowdown
      posix
      posix-extras
      srfi-1
+     srfi-13
      srfi-18
      sxml-transforms)
 
@@ -42,6 +45,13 @@
 (define markdown-transforms-rules
   `((heading . ,(lambda (tag args)
                   (append (list tag (+ 1 (car args))) (cdr args))))
+    ;; Syntax highlighting
+    (verbatim . ,(lambda (tag args)
+                   (cons 'verbatim
+                         (map
+                          (lambda (e) (cons 'html-element (if (pair? e) e (list e))))
+                          (cdr (html->sxml (html-colorize 'scheme (string-concatenate args))))))
+                   ))
     (*text* . ,(lambda (tag args) args))
     (*default* . ,(lambda (tag args) (cons tag args)))))
 

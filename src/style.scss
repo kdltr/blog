@@ -227,12 +227,16 @@
      ((// ol)
      (list-style-type upper-roman)))
 
-     ;; Syntax highlighting in <pre/>
-     (code
+     ;; Line wrapping in <pre><code/></pre>
+     ((> pre code)
       (display block)
-      (font-family ,code-font)
-      (background-color ,bg-highlight)
       (white-space pre-wrap))
+     
+     ;; Syntax highlighting in <code/>
+     (code
+      (font-family ,code-font)
+      (background-color ,bg-highlight))
+      
      ((= class "default") (color ,primary-content))
      ((= class "symbol") (color ,cyan))
      ((= class "string") (color ,green))
