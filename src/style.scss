@@ -230,6 +230,7 @@
      ;; Line wrapping in <pre><code/></pre>
      ((> pre code)
       (display block)
+      (padding 0.5em)
       (white-space pre-wrap))
      
      ;; Syntax highlighting in <code/>
