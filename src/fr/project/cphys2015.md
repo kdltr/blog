@@ -48,6 +48,10 @@ Presse
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CAhsxDl27pk" style="border:0" allowfullscreen="allowfullscreen"/>
 
+[Jupiter Hadley][jupiter] a fait une vidéo à propos des jeux créés durant le mois de décembre 2015 du challenge 1GameAMonth et a donc parlé du jeu :
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RIQcEbkHwS8" style="border:0" allowfullscreen="allowfullscreen"/>
+
 
 Téléchargements
 ===============
@@ -74,6 +78,7 @@ Le dépôt du jeu est disponible [ici](/cgit.cgi/crepe).
 [gimp]: http://www.gimp.org/
 
 [auroz]: https://www.youtube.com/channel/UCRBNifxShck1L392iGXAyrg
+[jupiter]: http://www.jupiterhadley.com/
 
 [gpl]: http://www.gnu.org/licenses/gpl-3.0.html
 [cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/

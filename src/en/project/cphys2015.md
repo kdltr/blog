@@ -47,6 +47,9 @@ Press
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CAhsxDl27pk" style="border:0" allowfullscreen="allowfullscreen"/>
 
+[Jupiter Hadley][jupiter] made a video about all the games made during the december 2015 1GameAMonth challenge, hence talked about the game:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RIQcEbkHwS8" style="border:0" allowfullscreen="allowfullscreen"/>
 
 Downloads
 =========
@@ -73,6 +76,7 @@ The game’s repository is available [here](/cgit.cgi/crepe).
 [gimp]: http://www.gimp.org/
 
 [auroz]: https://www.youtube.com/channel/UCRBNifxShck1L392iGXAyrg
+[jupiter]: http://www.jupiterhadley.com/
 
 [gpl]: http://www.gnu.org/licenses/gpl-3.0.html
 [cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
