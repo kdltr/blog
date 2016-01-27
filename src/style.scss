@@ -5,7 +5,7 @@
        (base00    "#45545a") ; light primary content (default #657b83)
        (base0     "#839496") ; dark primary content
        (base1     "#93a1a1") ; light secondary content / dark optional emphasized content
-       (base2     "#eee8d5") ; light background highlights
+       (base2     "#F8F4DD") ; light background highlights (default #eee8d5
        (base3     "#fdfaf1") ; light background (default #fdf6e3)
        (white     "#ffffff")
        (yellow    "#b58900")
@@ -227,11 +227,17 @@
      ((// ol)
      (list-style-type upper-roman)))
 
-     ;; Syntax highlighting in <pre/>
-     (pre
-      (font-family ,code-font)
-      (background-color ,bg-highlight)
+     ;; Line wrapping in <pre><code/></pre>
+     ((> pre code)
+      (display block)
+      (padding 0.5em)
       (white-space pre-wrap))
+     
+     ;; Syntax highlighting in <code/>
+     (code
+      (font-family ,code-font)
+      (background-color ,bg-highlight))
+      
      ((= class "default") (color ,primary-content))
      ((= class "symbol") (color ,cyan))
      ((= class "string") (color ,green))
@@ -240,6 +246,9 @@
      ((= class "paren3") (color ,red))
      ((= class "paren4") (color ,blue))
      ((= class "paren5") (color ,orange))
-     ((= class "paren6") (color ,magenta))))
+     ((= class "paren6") (color ,magenta))
+
+     ;; Article-wide images
+     ((= class "fill") (width 100%))))
 
 ; vi: set ft=scheme:
