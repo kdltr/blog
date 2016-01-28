@@ -1,37 +1,41 @@
 ((title . "About")
  (category . "index"))
 
-Welcome!
+Hi and welcome to my humble website!
 
-You just stumbled upon, probably by accident, my little personal
-website.
+I’m Adrien Ramos, also known as Kooda on the Internet.
+I’m a technology and libre software enthusiast.
 
-I’m Adrien Ramos, also known as Kooda on the Internet (and sometimes
-elsewhere). I’m a technology and libre software enthusiast.
+I’m a programmer and I mainly develop in the [CHICKEN Scheme][chicken] language.
+I enjoy declarative paradigms like logic, meta or functional programming.
 
-I mainly develop in the [CHICKEN Scheme][chicken] language.
+In here you’ll be able to discover my past and present [game projects][projects].
+I also have a [GIT web viewer][git] where you can find pretty much everything I do.
 
-You can [read my blog][blog] if you feel like doing so. Otherwise you
-can always go on your way and watch some [otter pictures][dailyotter].
+You may also [read my blog][blog] if you feel like doing so.
+It contains various thoughts and programming experiments.
+
+Otherwise you can always go on your way and watch some nice [otter pictures][dailyotter].
 
 I’m also available as a freelancer if you need a developer or a
-teacher. Do not hesitate to contact me.
+programming and game design teacher. Do not hesitate to contact me.
 
 
 Contact
 =======
 
-I’m easily reachable via email and xmpp/jabber at the following
-address: [kooda@upyum.com][mail].
+- Mail: [kooda@upyum.com][mail]
+- Twitter: [@kdltr][twitter]
+- Twitch: [kdltr][twitch]
+- IRC: Kooda on [Freenode][freenode]
 
-I use twitter, you can find me at [@kdltr][kdltr]
 
-I’m also often available on IRC, on the [freenode][freenode] network
-under the nickname _Kooda_.
-
+[git]:          /cgit.cgi
+[projects]:     projects.xhtml
 [chicken]:      http://call-cc.org
 [blog]:         posts.xhtml
 [dailyotter]:   http://dailyotter.org/
 [mail]:         mailto:kooda@upyum.com
-[kdltr]:        https://twitter.com/kdltr
-[freenode]:     https://freenode.net/
+[twitter]:      https://twitter.com/kdltr
+[twitch]:       http://www.twitch.tv/kdltr/
+[freenode]:     irc://chat.freenode.org/Kooda,isnick

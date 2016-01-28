@@ -1,40 +1,41 @@
 ((title . "À propos")
  (category . "index"))
 
-Bienvenue !
+Bonjour et bienvenue sur mon humble site web !
 
-Vous venez de tomber, probablement par accident, sur mon petit site
-web personnel.
+Je suis Adrien Ramos, aussi connu comme Kooda sur Internet.
+Je suis un passionné de technologies et logiciels libres.
 
-Je suis Adrien Ramos, aussi connu comme Kooda sur l’Internet (et
-parfois ailleurs). Je suis un passionné de technologie et de logiciel
-libre.
+Je suis programmeur et développe principalement dans le langage [CHICKEN Scheme][chicken].
+J’apprécie beaucoup les approches déclaratives telles que la programmation logique, meta ou fonctionnelle.
 
-Je développe principalement dans le langage [CHICKEN Scheme][chicken].
+Ici, vous pouvez trouver mes [projets de jeux][projects] présents et passés.
+Un [visonneur web GIT][git] est aussi disponible, sur lequel vous pouvez trouver à peu près tout ce que je fais.
 
-Vous pouvez [aller lire mon blog][blog] si le cœur vous en dit. Sinon,
-vous pouvez toujours passer votre chemin et aller regarder quelques
-[photos de loutres][dailyotter].
+Allez jeter un œil à [mon blog][blog] si le cœur vous en dit.
+Il contient diverses réflexions et expériences de programmation.
 
-Je suis disponible au travers de mon auto-entreprise si vous avez
-besoin d’un développeur ou d’un formateur. N’hésitez pas à me
-contacter.
+Sinon, vous pouvez toujours aller voir quelques jolies [photos de loutres][dailyotter].
+
+Au fait ! Je suis disponible en tant que free-lance si vous avez besoin d’un développeur
+ou un formateur en programmation et/ou game design. N’hésitez pas à me contacter !
 
 
 Contact
 =======
 
-Je suis facilement joignable par mail et xmpp/jabber à l’adresse
-suivante: [kooda@upyum.com][mail].
+- Mail: [kooda@upyum.com][mail]
+- Twitter: [@kdltr][twitter]
+- Twitch: [kdltr][twitch]
+- IRC: Kooda on [Freenode][freenode]
 
-J’utilise twitter, vous pouvez me trouver à [@kdltr][kdltr]
 
-Je suis aussi souvent disponible sur IRC, sur le réseau
-[freenode][freenode] sous le pseudonyme _Kooda_.
-
+[git]:          /cgit.cgi
+[projects]:     projects.xhtml
 [chicken]:      http://call-cc.org
 [blog]:         posts.xhtml
 [dailyotter]:   http://dailyotter.org/
 [mail]:         mailto:kooda@upyum.com
-[kdltr]:        https://twitter.com/kdltr
-[freenode]:     https://freenode.net/
+[twitter]:      https://twitter.com/kdltr
+[twitch]:       http://www.twitch.tv/kdltr/
+[freenode]:     irc://chat.freenode.org/Kooda,isnick
