@@ -9,16 +9,13 @@ I’m a technology and libre software enthusiast.
 I’m a programmer and I mainly develop in the [CHICKEN Scheme][chicken] language.
 I enjoy declarative paradigms like logic, meta or functional programming.
 
-In here you’ll be able to discover my past and present [game projects][projects].
+In here can discover my past and present [game projects][projects].
 I also have a [GIT web viewer][git] where you can find pretty much everything I do.
 
 You may also [read my blog][blog] if you feel like doing so.
 It contains various thoughts and programming experiments.
 
 Otherwise you can always go on your way and watch some nice [otter pictures][dailyotter].
-
-I’m also available as a freelancer if you need a developer or a
-programming and game design teacher. Do not hesitate to contact me.
 
 
 Contact

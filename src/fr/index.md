@@ -17,9 +17,6 @@ Il contient diverses réflexions et expériences de programmation.
 
 Sinon, vous pouvez toujours aller voir quelques jolies [photos de loutres][dailyotter].
 
-Au fait ! Je suis disponible en tant que free-lance si vous avez besoin d’un développeur
-ou un formateur en programmation et/ou game design. N’hésitez pas à me contacter !
-
 
 Contact
 =======
