@@ -81,6 +81,7 @@
 
        ((> footer)
          (font-size 0.8em)
+         (padding-bottom 2ex)
          (padding-top 2ex)
          (text-align right)
          (color ,secondary-content)))
@@ -91,6 +92,7 @@
        (border-top-width 1px)
        (border-top-style solid)
        (border-top-color ,secondary-content)
+       (margin-bottom-width 1em)
 
        ((> nav)
          (text-align right))
@@ -249,6 +251,19 @@
      ((= class "paren6") (color ,magenta))
 
      ;; Article-wide images
-     ((= class "fill") (width 100%))))
+     ((= class "fill") (width 100%))
+     ((= class "flattr-button")
+      (background-color "#71bb3d")
+      (color "#ffffff")
+      (padding 0.5ex)
+      ((& :before)
+       (content "\"\"")
+       (display inline-block)
+       (vertical-align middle)
+       (margin-right 0.2rem)
+       (width 20px)
+       (height 16px)
+       (background-image ,(file-data-url "image/png"
+                                         "resources/flattr.png"))))))
 
 ; vi: set ft=scheme:

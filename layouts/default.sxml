@@ -45,6 +45,10 @@
          (h1 (@ (id ,(string-append ($ 'category) "-title"))) ,($ 'title))
          (inject ,contents)))
      (footer
-       ,(i18n-ref 'footer)))))
+      ,(i18n-cond "If you liked, please "
+                  "Si vous avez aimé ")
+      ,(flattr-button)
+      " "
+      ,(i18n-ref 'footer)))))
 
 ;; vi: set ft=scheme:
