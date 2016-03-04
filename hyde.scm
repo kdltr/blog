@@ -146,14 +146,11 @@
            (cut $ 'date <>)))
 
 ;; <a href="https://flattr.com/submit/auto?fid=y79nzj&url=http%3A%2F%2Fwww.upyum.com%2F" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
-(define (flattr-button #!optional (page (current-page)))
+(define (flattr-url #!optional (page (current-page)))
   (let* ((base-uri (uri-reference "https://flattr.com/submit/auto"))
          (attrs `((fid . "y79nzj")
-                  (url . ,(string-append "https:" ($ 'base-uri page) (page-path page)))
-                  (target . "_blank")))
+                  (url . ,(string-append "https:" ($ 'base-uri page) (page-path page)))))
          (flattr-page-uri
           (parameterize ((form-urlencoded-separator "&"))
             (uri->string (update-uri base-uri query: attrs)))))
-    `(a (@ (class "flattr-button")
-           (href ,flattr-page-uri))
-        (span "Flattr this!"))))
+    flattr-page-uri))

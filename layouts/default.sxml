@@ -13,6 +13,10 @@
               (title ,(i18n-cond
                        "Upyum.com - All blog posts"
                        "Upyum.com - Tous les billets de blog"))))
+     (link (@ (rel payment)
+              (type "text/html")
+              (href ,(flattr-url))
+              (title "Flattr this!")))
      ; (base (@ (href ,($ 'base-uri))))
      )
    (body
@@ -47,7 +51,9 @@
      (footer
       ,(i18n-cond "If you liked, please "
                   "Si vous avez aimé ")
-      ,(flattr-button)
+      (a (@ (class "flattr-button")
+            (href ,(flattr-url)))
+         (span "Flattr this!"))
       " "
       ,(i18n-ref 'footer)))))
 
