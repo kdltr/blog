@@ -52,6 +52,7 @@ Presse
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RIQcEbkHwS8" style="border:0" allowfullscreen="allowfullscreen"/>
 
+Elle a également écrit un article à propos de ses jeux favoris de décembre 2015 et [y a listé le jeu][gamejolt] !
 
 Téléchargements
 ===============
@@ -79,6 +80,7 @@ Le dépôt du jeu est disponible [ici](/cgit.cgi/crepe).
 
 [auroz]: https://www.youtube.com/channel/UCRBNifxShck1L392iGXAyrg
 [jupiter]: http://www.jupiterhadley.com/
+[gamejolt]: http://fireside.gamejolt.com/post/jam-favorites-one-game-a-month-december-uzje32wf
 
 [gpl]: http://www.gnu.org/licenses/gpl-3.0.html
 [cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
