@@ -4,6 +4,7 @@
 2016
 ====
 
+- [Life is so Pretty](project/life-is-so-pretty.xhtml), un jeu créé à l’occasion de la game jam Lisp du printemps 2016.
 - [Reptifur’s website](https://repti.fr), le site web de mon artiste attitré.
 
 2015
