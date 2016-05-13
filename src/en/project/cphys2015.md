@@ -69,7 +69,7 @@ Assets are under the [Creative Commons By-SA][cc-by-sa].
 The game’s repository is available [here](/cgit.cgi/crepe).
 
 
-[reptifur]: https://twitter.com/reptifur
+[reptifur]: https://repti.fr
 
 [chicken]: http://call-cc.org/
 [sdl2]: https://libsdl.org/

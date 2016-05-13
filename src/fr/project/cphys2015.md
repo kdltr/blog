@@ -70,7 +70,7 @@ Les ressources sont sous [Creative Commons By-SA][cc-by-sa].
 Le dépôt du jeu est disponible [ici](/cgit.cgi/crepe).
 
 
-[reptifur]: https://twitter.com/reptifur
+[reptifur]: https://repti.fr
 
 [chicken]: http://call-cc.org/
 [sdl2]: https://libsdl.org/
