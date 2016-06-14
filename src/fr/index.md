@@ -22,10 +22,12 @@ Contact
 =======
 
 - Mail: [kooda@upyum.com][mail]
+- XMPP: [kooda@upyum.com][xmpp]
 - Twitter: [@kdltr][twitter]
-- Twitch: [kdltr][twitch]
 - IRC: Kooda on [Freenode][freenode]
-
+- Github: [kdltr][github]
+- Gitlab: [kooda][gitlab]
+- Liberapay: [Kooda][liberapay]
 
 [git]:          /cgit.cgi
 [projects]:     projects.xhtml
@@ -33,6 +35,10 @@ Contact
 [blog]:         posts.xhtml
 [dailyotter]:   http://dailyotter.org/
 [mail]:         mailto:kooda@upyum.com
+[xmpp]:         xmpp:kooda@upyum.com?subscribe
 [twitter]:      https://twitter.com/kdltr
 [twitch]:       http://www.twitch.tv/kdltr/
 [freenode]:     irc://chat.freenode.org/Kooda,isnick
+[github]:       https://github.com/kdltr
+[gitlab]:       https://gitlab.com/u/kooda
+[liberapay]:    https://liberapay.com/Kooda/
