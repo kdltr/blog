@@ -25,6 +25,7 @@ Contact
 - XMPP: [kooda@upyum.com][xmpp]
 - Twitter: [@kdltr][twitter]
 - IRC: Kooda on [Freenode][freenode]
+- Itch.io: [Kooda][itchio]
 - Github: [kdltr][github]
 - Gitlab: [kooda][gitlab]
 - Liberapay: [Kooda][liberapay]
@@ -42,3 +43,4 @@ Contact
 [github]:       https://github.com/kdltr
 [gitlab]:       https://gitlab.com/u/kooda
 [liberapay]:    https://liberapay.com/Kooda/
+[itchio]:       https://kooda.itch.io/
