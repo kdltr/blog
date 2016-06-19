@@ -9,7 +9,7 @@ I’m a technology and libre software enthusiast.
 I’m a programmer and I mainly develop in the [CHICKEN Scheme][chicken] language.
 I enjoy declarative paradigms like logic, meta or functional programming.
 
-In here can discover my past and present [game projects][projects].
+In here you can discover my past and present [game projects][projects].
 I also have a [GIT web viewer][git] where you can find pretty much everything I do.
 
 You may also [read my blog][blog] if you feel like doing so.
