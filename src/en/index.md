@@ -21,14 +21,13 @@ Otherwise you can always go on your way and watch some nice [otter pictures][dai
 Contact
 =======
 
-- Mail: [kooda@upyum.com][mail]
-- XMPP: [kooda@upyum.com][xmpp]
+- Mail/XMPP: [kooda@upyum.com][mail]
 - Twitter: [@kdltr][twitter]
 - IRC: Kooda on [Freenode][freenode]
 - Itch.io: [Kooda][itchio]
-- Github: [kdltr][github]
-- Gitlab: [kooda][gitlab]
+- [Gitlab][gitlab] and [Github][github]
 - Liberapay: [Kooda][liberapay]
+- Streak.club: [Kooda][streak]
 
 [git]:          /cgit.cgi
 [projects]:     projects.xhtml
@@ -44,3 +43,4 @@ Contact
 [gitlab]:       https://gitlab.com/u/kooda
 [liberapay]:    https://liberapay.com/Kooda/
 [itchio]:       https://kooda.itch.io/
+[streak]:       https://streak.club/u/kooda

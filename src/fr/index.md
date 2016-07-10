@@ -21,14 +21,13 @@ Sinon, vous pouvez toujours aller voir quelques jolies [photos de loutres][daily
 Contact
 =======
 
-- Mail: [kooda@upyum.com][mail]
-- XMPP: [kooda@upyum.com][xmpp]
+- Mail/XMPP: [kooda@upyum.com][mail]
 - Twitter: [@kdltr][twitter]
-- IRC: Kooda on [Freenode][freenode]
+- IRC: Kooda sur [Freenode][freenode]
 - Itch.io: [Kooda][itchio]
-- Github: [kdltr][github]
-- Gitlab: [kooda][gitlab]
+- [Gitlab][gitlab] et [Github][github]
 - Liberapay: [Kooda][liberapay]
+- Streak.club: [Kooda][streak]
 
 [git]:          /cgit.cgi
 [projects]:     projects.xhtml
@@ -44,3 +43,4 @@ Contact
 [gitlab]:       https://gitlab.com/u/kooda
 [liberapay]:    https://liberapay.com/Kooda/
 [itchio]:       https://kooda.itch.io/
+[streak]:       https://streak.club/u/kooda
