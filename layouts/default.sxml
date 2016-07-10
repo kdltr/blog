@@ -42,9 +42,11 @@
                         `(: bos "/" ,($ 'lang))
                         (page-path)
                         (i18n-cond "/fr" "/en"))))
-            (i18n-cond
-              `(a (@ (xml:lang fr) (href ,path)) "Version française")
-              `(a (@ (xml:lang en) (href ,path)) "English version"))))
+            (if ($ 'translated)
+                (i18n-cond
+                    `(a (@ (xml:lang fr) (href ,path)) "Version française")
+                    `(a (@ (xml:lang en) (href ,path)) "English version"))
+                '())))
        (article
          (h1 (@ (id ,(string-append ($ 'category) "-title"))) ,($ 'title))
          (inject ,contents)))

@@ -78,7 +78,8 @@
                        (footer ("en" . ("Website generated with "
                                         (a (@ (href "http://wiki.call-cc.org/egg/hyde")) "Hyde") "."))
                                ("fr" . ("Site généré avec "
-                                        (a (@ (href "http://wiki.call-cc.org/egg/hyde")) "Hyde") "."))))
+                                        (a (@ (href "http://wiki.call-cc.org/egg/hyde")) "Hyde") ".")))
+                       (translated . #t))
                      ((: bos "en/" (+ any))
                        (lang . "en"))
                      ((: bos "fr/" (+ any))
