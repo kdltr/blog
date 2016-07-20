@@ -31,17 +31,11 @@
 ;; * Tagging system
 ;; * Atom feeds
 
-(set! sxml-conversion-rules
-  (cons* `(*PI* *preorder* . ,(lambda (tag args)
-                                (string-append "<?"
-                                               (symbol->string (car args))
-                                               " "
-                                               (string-join (cdr args))
-                                               "?>\n")))
-         `(*COMMENT* *preorder* .
-                     ,(lambda (tag args)
-                        ""))
-         sxml-conversion-rules))
+(define (title-identify tag)
+  `(,tag *preorder* .
+         ,(lambda (tag args)
+            `(,tag (@ (id ,(pathify (apply string-append (car args)))))
+                   ,args))))
 
 (define markdown-transforms-rules
   `((heading . ,(lambda (tag args)
@@ -56,11 +50,31 @@
     (*text* . ,(lambda (tag args) args))
     (*default* . ,(lambda (tag args) (cons tag args)))))
 
+(define html-transforms-rules
+  `(,@(map title-identify '(h2 h3 h4 h5 h6))
+    (*text* . ,(lambda (tag args) args))
+    (*default* . ,(lambda (tag args) (cons tag args)))))
+
+(set! sxml-conversion-rules
+  (cons*
+   `(*PI* *preorder* . ,(lambda (tag args)
+                          (string-append "<?"
+                                         (symbol->string (car args))
+                                         " "
+                                         (string-join (cdr args))
+                                         "?>\n")))
+   `(*COMMENT* *preorder* .
+               ,(lambda (tag args)
+                  ""))
+   sxml-conversion-rules))
+
+
 (define (translate/md)
   (let* ((input-md (markdown->sxml*))
          (transformed-md (pre-post-order* input-md markdown-transforms-rules))
          (html-md (markdown-sxml->html-sxml transformed-md))
-         (html-output (pre-post-order* html-md sxml-conversion-rules)))
+         (transformed-html (pre-post-order* html-md html-transforms-rules))
+         (html-output (pre-post-order* transformed-html sxml-conversion-rules)))
     (SRV:send-reply html-output)))
 
 (translators
