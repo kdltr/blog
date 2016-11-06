@@ -2,16 +2,14 @@
  (category . "posts"))
 
 `((aside
-   ;;(p (a (@ (href "/en/tags.xhtml")) "tags list"))
-   (p (a (@ (href "/en/feed/posts.atom")) "atom feed")))
+   (a (@ (href "/en/feed/posts.atom")) "atom feed"))
   (nav
    ,(intersperse
       (map
         (lambda (p)
           `((p (a (@ (href ,(page-path p))) ,($ 'title p))
-               " (posted on " ,(format-seconds ($ 'date p)) ")")
-            (p ,($ 'abstract p))))
+               " (posted on " ,(format-seconds ($ 'date p)) ")"
+             (br)
+              ,($ 'abstract p))))
         (all-posts))
       '(hr))))
-
-; vi: set ft=scheme:

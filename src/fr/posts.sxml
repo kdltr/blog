@@ -2,15 +2,15 @@
  (category . "posts"))
 
 `((aside
-   ;;(p (a (@ (href "/fr/tags.xhtml")) "liste des tags"))
-   (p (a (@ (href "/fr/feed/posts.atom")) "flux atom")))
+   (a (@ (href "/fr/feed/posts.atom")) "flux atom"))
   (nav
    ,(intersperse
       (map
         (lambda (p)
           `((p (a (@ (href ,(page-path p))) ,($ 'title p))
-               " (posté le " ,(format-seconds ($ 'date p)) ")")
-             (p ,($ 'abstract p))))
+               " (posté le " ,(format-seconds ($ 'date p)) ")"
+              (br)
+              ,($ 'abstract p))))
         (all-posts))
       '(hr))))
 

@@ -40,13 +40,6 @@
 (define markdown-transforms-rules
   `((heading . ,(lambda (tag args)
                   (append (list tag (+ 1 (car args))) (cdr args))))
-    ;; Syntax highlighting
-    (verbatim . ,(lambda (tag args)
-                   (cons 'verbatim
-                         (map
-                          (lambda (e) (cons 'html-element (if (pair? e) e (list e))))
-                          (cdr (html->sxml (html-colorize 'scheme (string-concatenate args))))))
-                   ))
     (*text* . ,(lambda (tag args) args))
     (*default* . ,(lambda (tag args) (cons tag args)))))
 
@@ -87,12 +80,7 @@
 (default-page-vars '(((* any)
                        (main-title ("en" . "Kooda’s burrow")
                                    ("fr" . "Le terrier de Kooda"))
-                       ; (base-uri . "//localhost:8080/")
                        (base-uri . "//www.upyum.com")
-                       (footer ("en" . ("Website generated with "
-                                        (a (@ (href "http://wiki.call-cc.org/egg/hyde")) "Hyde") "."))
-                               ("fr" . ("Site généré avec "
-                                        (a (@ (href "http://wiki.call-cc.org/egg/hyde")) "Hyde") ".")))
                        (translated . #t))
                      ((: bos "en/" (+ any))
                        (lang . "en"))
@@ -122,14 +110,6 @@
            ,(if (string=? ($ 'category) id) '(class selected) '()))
         ,title)))
 
-(define (file-data-url mime path)
-  (string-append "url(data:"
-                 mime
-                 ";base64,"
-                 (base64-encode
-                  (call-with-input-file path (cut read-string #f <>)))
-                 ")"))
-
 (define (format-seconds seconds)
   (time->string (seconds->utc-time seconds)
                 (i18n-cond
@@ -141,13 +121,6 @@
     (lambda ()
       (read)
       (read-string))))
-
-(define (reading-time path)
-  (let ((time (inexact->exact
-               (ceiling (/ (length (string-split (page-content path))) 150)))))
-    `(,time
-      " "
-      ,(if (< time 2) "minute" "minutes"))))
 
 (define (sort-by pages accessor)
   (sort pages (lambda (p1 p2) (> (accessor p1) (accessor p2)))))

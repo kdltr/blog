@@ -1,31 +1,9 @@
 ()
 
 `(;;,(generate-post-nav)
-  (aside
-    (p
-      ,(i18n-cond
-         "Posted on "
-         "Publié le ")
-      ,(format-seconds ($ 'date)))
-    (p
-      ,(i18n-cond
-         "Last updated on "
-         "Dernière modification le ")
-      ,(format-seconds
-         (stat-modification-time
-           (file-stat
-             (string-append
-               (source-dir) "/"
-               (page-source-path))))))
-    (p
-      ,(i18n-cond
-         "Estimated reading time: "
-         "Temps de lecture estimé : ")
-      ,(reading-time (page-source-path))))
   ;; TODO
   ;; (nav (@ (id toc))
   ;;   "Table of content")
-  (p ,($ 'abstract))
   (inject ,contents))
 
 ;; vi: set ft=scheme:

@@ -1,6 +1,5 @@
 ()
 `((*PI* xml "version=\"1.0\"" "encoding=\"utf-8\"")
-  (*PI* xml-stylesheet "type=\"text/css\"" "href=\"/style.css\"")
   (doctype-html)
   (html (@ (xmlns "http://www.w3.org/1999/xhtml")
            (xml:lang ,($ 'lang)))
@@ -17,46 +16,30 @@
               (type "text/html")
               (href ,(flattr-url))
               (title "Flattr this!")))
-     ; (base (@ (href ,($ 'base-uri))))
-     )
+     (link (@ (rel stylesheet)
+              (type "text/css")
+              (href "/style.css"))))
    (body
-     (header
-       ,(i18n-ref 'main-title))
-     (nav
-       ,(map
-          (lambda (p)
+    (header
+     ,(menu-link "home" "index")
+     " − "
+     ,(menu-link "posts" "posts")
+     " − "
+     ,(menu-link "projects" "projects")
+     " — "
+     ,(let ((path (irregex-replace
+                    `(: bos "/" ,($ 'lang))
+                    (page-path)
+                    (i18n-cond "/fr" "/en"))))
+        (if ($ 'translated)
             (i18n-cond
-              (menu-link (car p) (car p))
-              (menu-link (cdr p) (car p))))
-          '(("Posts" . "Billets")
-            ("Projects" . "Projets")
-            ;; ("Drawings" . "Dessins")
-            ;; ("Music" . "Musique")
-            ))
-       ,(i18n-cond
-          (menu-link "About" "index" "index")
-          (menu-link "À propos" "index" "index")))
-     (main
-       (nav
-         ,(let ((path (irregex-replace
-                        `(: bos "/" ,($ 'lang))
-                        (page-path)
-                        (i18n-cond "/fr" "/en"))))
-            (if ($ 'translated)
-                (i18n-cond
-                    `(a (@ (xml:lang fr) (href ,path)) "Version française")
-                    `(a (@ (xml:lang en) (href ,path)) "English version"))
-                '())))
-       (article
-         (h1 (@ (id ,(string-append ($ 'category) "-title"))) ,($ 'title))
-         (inject ,contents)))
-     (footer
-      ,(i18n-cond "If you liked, please "
-                  "Si vous avez aimé ")
-      (a (@ (class "flattr-button")
-            (href ,(flattr-url)))
-         (span "Flattr this!"))
-      " "
-      ,(i18n-ref 'footer)))))
+                `(a (@ (xml:lang fr) (href ,path)) "(version française)")
+                   `(a (@ (xml:lang en) (href ,path)) "(english version)"))
+            '())))
+    (main
+     (h1 ,($ 'title))
+     (inject ,contents))
+    (footer
+     (a (@ (href "/")) "upyum.com")))))
 
 ;; vi: set ft=scheme:
