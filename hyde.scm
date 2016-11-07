@@ -85,10 +85,7 @@
                      ((: bos "en/" (+ any))
                        (lang . "en"))
                      ((: bos "fr/" (+ any))
-                       (lang . "fr"))
-                     ((: "post/" (+ any) eos)
-                       (layouts "post.sxml" "default.sxml")
-                       (category . "posts"))))
+                       (lang . "fr"))))
 
 (default-extension "xhtml")
 
@@ -105,9 +102,7 @@
 
 (define (menu-link title path #!optional (id path))
   (let ((id (pathify id)))
-    `(a (@ (href ,(string-append (i18n-link (pathify path)) ".xhtml"))
-           (id ,(string-append id "-link"))
-           ,(if (string=? ($ 'category) id) '(class selected) '()))
+    `(a (@ (href ,(string-append (i18n-link (pathify path)) ".xhtml")))
         ,title)))
 
 (define (format-seconds seconds)
