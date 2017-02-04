@@ -1,6 +1,12 @@
 ((title . "Projects")
  (category . "projects"))
 
+2017
+====
+
+- [EZD](/cgit.cgi/ezd), a library / server toolkit for graphical user interfaces creation.
+- [CHICKEN Scheme](https://call-cc.org/), a Scheme language compiler and interpreter. Officially became maintainer on the 20th of january.
+
 2016
 ====
 

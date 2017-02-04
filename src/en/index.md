@@ -6,7 +6,8 @@ Hi and welcome to my humble website!
 I’m Adrien Ramos, also known as Kooda on the Internet.
 I’m a technology and libre software enthusiast.
 
-I’m a programmer and I mainly develop in the [CHICKEN Scheme][chicken] language.
+I’m a programmer and I mainly develop in the [CHICKEN Scheme][chicken] language, a project I’m also a maintainer of.
+
 I enjoy declarative paradigms like logic, meta or functional programming.
 
 In here you can discover my past and present [game projects][projects].
