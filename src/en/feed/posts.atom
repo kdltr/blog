@@ -4,7 +4,11 @@
  (date . "2014-11-08")
  (tag . "tag:www.upyum.com,~A:~A"))
 
-(pages->atom-doc (reverse (all-posts))
+(pages->atom-doc (let* ((posts (all-posts))
+                        (len (length posts)))
+                   (if (> len 5)
+                     (take posts 5)
+                     posts))
                  page-date->rfc3339-string:
                  (lambda (s)
                    (rfc3339->string (seconds->rfc3339 s))))
