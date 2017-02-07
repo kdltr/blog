@@ -26,15 +26,15 @@
      ,(menu-link "posts" "posts")
      " − "
      ,(menu-link "projects" "projects")
-     " — "
      ,(let ((path (irregex-replace
                     `(: bos "/" ,($ 'lang))
                     (page-path)
                     (i18n-cond "/fr" "/en"))))
         (if ($ 'translated)
+            (list " — "
             (i18n-cond
-                `(a (@ (xml:lang fr) (href ,path)) "(version française)")
-                   `(a (@ (xml:lang en) (href ,path)) "(english version)"))
+              `(a (@ (xml:lang fr) (href ,path)) "(version française)")
+              `(a (@ (xml:lang en) (href ,path)) "(english version)")))
             '())))
     (main
      (h1 ,($ 'title))
