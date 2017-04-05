@@ -1,0 +1,14 @@
+((title . "Le terrier de Kooda")
+ (subtitle . "flux atom des posts sur scheme")
+ (authors "Kooda")
+ (date . "2017-04-05")
+ (tag . "tag:www.upyum.com,~A:~A"))
+
+(pages->atom-doc (let* ((posts (all-scheme-posts))
+                        (len (length posts)))
+                   (if (> len 5)
+                     (take posts 5)
+                     posts))
+                 page-date->rfc3339-string:
+                 (lambda (s)
+                   (rfc3339->string (seconds->rfc3339 s))))
