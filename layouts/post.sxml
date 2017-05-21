@@ -4,6 +4,7 @@
   ;; TODO
   ;; (nav (@ (id toc))
   ;;   "Table of content")
+  (p ,(reading-time (page-source-path)))
   (inject ,contents))
 
 ;; vi: set ft=scheme:

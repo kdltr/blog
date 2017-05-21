@@ -85,7 +85,9 @@
                      ((: bos "en/" (+ any))
                        (lang . "en"))
                      ((: bos "fr/" (+ any))
-                       (lang . "fr"))))
+                       (lang . "fr"))
+                     ((: bos (or "fr" "en") "/post/" (+ any) eos)
+                      (layouts "post.sxml" "default.sxml"))))
 
 (default-extension "xhtml")
 
@@ -131,12 +133,11 @@
 (define (all-scheme-posts)
   (filter (lambda (p) (eq? ($ 'category p) 'scheme)) (all-posts)))
 
-;; <a href="https://flattr.com/submit/auto?fid=y79nzj&url=http%3A%2F%2Fwww.upyum.com%2F" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
-(define (flattr-url #!optional (page (current-page)))
-  (let* ((base-uri (uri-reference "https://flattr.com/submit/auto"))
-         (attrs `((fid . "y79nzj")
-                  (url . ,(string-append "https:" ($ 'base-uri page) (page-path page)))))
-         (flattr-page-uri
-          (parameterize ((form-urlencoded-separator "&"))
-            (uri->string (update-uri base-uri query: attrs)))))
-    flattr-page-uri))
+(define (reading-time path)
+  (let ((time (inexact->exact
+               (ceiling (/ (length (string-split (page-content path))) 150)))))
+    `(,(i18n-cond "Estimated reading time: "
+                  "Durée de lecture estimée : ")
+      ,time
+      " "
+      ,(if (< time 2) "minute" "minutes"))))

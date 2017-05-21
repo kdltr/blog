@@ -12,10 +12,6 @@
               (title ,(i18n-cond
                        "Upyum.com - All blog posts"
                        "Upyum.com - Tous les billets de blog"))))
-     (link (@ (rel payment)
-              (type "text/html")
-              (href ,(flattr-url))
-              (title "Flattr this!")))
      (link (@ (rel stylesheet)
               (type "text/css")
               (href "/style.css"))))
