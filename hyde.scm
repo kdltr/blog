@@ -1,5 +1,4 @@
 (use anaphora
-     base64
      colorize
      html-parser
      hyde

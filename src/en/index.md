@@ -23,7 +23,7 @@ Contact
 =======
 
 - Mail/XMPP: [kooda@upyum.com][mail]
-- Matrix: [@kooda:upyum.com][matrix]
+- Matrix: [@Kooda:elynx.fr][matrix]
 - Mastodon: [@Kooda@loutre.info][mastodon]
 - IRC: Kooda on [Freenode][freenode]
 - Itch.io: [Kooda][itchio]
@@ -44,4 +44,4 @@ Contact
 [gitlab]:       https://gitlab.com/u/kooda
 [liberapay]:    https://liberapay.com/Kooda/
 [itchio]:       https://kooda.itch.io/
-[matrix]:       https://matrix.to/#/@kooda:upyum.com
+[matrix]:       https://matrix.to/#/@Kooda:elynx.fr
