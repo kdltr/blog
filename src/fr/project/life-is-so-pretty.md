@@ -18,7 +18,7 @@ Sorti le 12 mai 2016, il est disponible sur [itch.io](https://kooda.itch.io/life
 Screenshots
 ===========
 
-[<img alt="Life is so Pretty screenshot" style="width:100%" src="/projects/life-is-so-pretty/screenshot1.png"/>]
+[<img alt="Life is so Pretty screenshot" class="f" src="/projects/life-is-so-pretty/screenshot1.png"/>]
 (/projects/life-is-so-pretty/screenshot1.png)
 
 Technologies

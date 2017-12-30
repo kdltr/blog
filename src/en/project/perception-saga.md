@@ -22,9 +22,9 @@ It is advised to play it in a calm environment, with good headphones.
 Screenshots
 ===========
 
-[<img alt="Perception-Saga screenshot" style="width:100%" src="/projects/perception-saga/screenshot1.png"/>](/projects/perception-saga/screenshot1.png)
+[<img alt="Perception-Saga screenshot" class="f" src="/projects/perception-saga/screenshot1.png"/>](/projects/perception-saga/screenshot1.png)
 
-[<img alt="Perception-Saga screenshot" style="width:100%" src="/projects/perception-saga/screenshot2.png"/>](/projects/perception-saga/screenshot2.png)
+[<img alt="Perception-Saga screenshot" class="f" src="/projects/perception-saga/screenshot2.png"/>](/projects/perception-saga/screenshot2.png)
 
 Technologies
 ============

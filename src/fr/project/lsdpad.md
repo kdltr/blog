@@ -20,9 +20,9 @@ Le but de cet étrange jouet est de découvrir un maximum d’*achievements* pos
 Captures d’écran
 ================
 
-[<img alt="LSDPad screenshot" style="border:1px solid lightgray;width:100%" src="/projects/lsdpad/screenshot1.png"/>](/projects/lsdpad/screenshot1.png)
+[<img alt="LSDPad screenshot" class="f" src="/projects/lsdpad/screenshot1.png"/>](/projects/lsdpad/screenshot1.png)
 
-[<img alt="LSDPad screenshot" style="border:1px solid lightgray;width:100%" src="/projects/lsdpad/screenshot2.png"/>](/projects/lsdpad/screenshot2.png)
+[<img alt="LSDPad screenshot" class="f" src="/projects/lsdpad/screenshot2.png"/>](/projects/lsdpad/screenshot2.png)
 
 
 Technologies

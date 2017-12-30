@@ -18,13 +18,13 @@ It has been a very pleasant experience, it took approximately a month to build.
 Screenshots
 ===========
 
-[<img alt="Crepes-party-hard-yolo-swag 2015 screenshot" style="width:100%" src="/projects/cphys2015/screenshot1.png"/>]
+[<img alt="Crepes-party-hard-yolo-swag 2015 screenshot" class="f" src="/projects/cphys2015/screenshot1.png"/>]
 (/projects/cphys2015/screenshot1.png)
 
-[<img alt="Crepes-party-hard-yolo-swag 2015 screenshot" style="width:100%" src="/projects/cphys2015/screenshot2.png"/>]
+[<img alt="Crepes-party-hard-yolo-swag 2015 screenshot" class="f" src="/projects/cphys2015/screenshot2.png"/>]
 (/projects/cphys2015/screenshot2.png)
 
-<video style="width:100%" controls="controls">
+<video class="f" controls="controls">
     <source src="/projects/cphys2015/video.webm" type="video/webm"/>
     <source src="/projects/cphys2015/video.mp4" type="video/mp4"/>
 </video>

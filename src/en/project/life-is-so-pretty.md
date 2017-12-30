@@ -18,7 +18,7 @@ Released on the 12th of may 2016, it’s available on [itch.io](https://kooda.it
 Screenshots
 ===========
 
-[<img alt="Life is so Pretty screenshot" style="width:100%" src="/projects/life-is-so-pretty/screenshot1.png"/>]
+[<img alt="Life is so Pretty screenshot" class="f" src="/projects/life-is-so-pretty/screenshot1.png"/>]
 (/projects/life-is-so-pretty/screenshot1.png)
 
 Technologies
