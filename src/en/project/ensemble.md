@@ -11,6 +11,8 @@ Beware! For now, this software is alpha quality at best!
 
 Latest version: **0.3**
 
+If you like this project, please consider [making a donation](https://liberapay.com/Kooda/donate)!
+
 # Screenshots
 
 ![Ensemble 0.3 screenshot](/projects/ensemble/screenshots/ensemble-0.3.png)

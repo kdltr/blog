@@ -11,6 +11,8 @@ Attention ! Pour le moment ce logiciel est en qualité alpha !
 
 Dernière version : **0.3**
 
+Si vous appréciez ce projet, n’hésitez pas à [faire un don](https://liberapay.com/Kooda/donate) !
+
 # Captures d’écran
 
 ![Ensemble 0.3 screenshot](/projects/ensemble/screenshots/ensemble-0.3.png)
