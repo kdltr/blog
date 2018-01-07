@@ -13,6 +13,8 @@ Latest version: **0.3**
 
 If you like this project, please consider [making a donation](https://liberapay.com/Kooda/donate)!
 
+Chat room about the project: [#ensemble:elynx.fr](https://matrix.to/#/#ensemble:elynx.fr)
+
 # Screenshots
 
 ![Ensemble 0.3 screenshot](/projects/ensemble/screenshots/ensemble-0.3.png)

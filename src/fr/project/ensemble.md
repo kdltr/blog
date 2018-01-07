@@ -13,6 +13,8 @@ Dernière version : **0.3**
 
 Si vous appréciez ce projet, n’hésitez pas à [faire un don](https://liberapay.com/Kooda/donate) !
 
+Salon de discussion autour du projet : [#ensemble:elynx.fr](https://matrix.to/#/#ensemble:elynx.fr)
+
 # Captures d’écran
 
 ![Ensemble 0.3 screenshot](/projects/ensemble/screenshots/ensemble-0.3.png)
