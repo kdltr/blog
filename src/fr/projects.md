@@ -4,6 +4,7 @@
 Logiciels
 =========
 
+- [Ensemble](project/ensemble.xhtml), un client Matrix en console écrit en Scheme.
 - [EZD](/cgit.cgi/ezd), une bibliothèque / un serveur boite à outil pour la création d’interfaces graphiques.
 - [CHICKEN Scheme](https://call-cc.org/), un compilateur et interpreteur pour le langage Scheme, dont je suis devenu officiellement mainteneur le 20 janvier 2017.
 - [Hardwood](http://wiki.call-cc.org/eggref/4/hardwood), une API modelée d’après Erlang pour CHICKEN Scheme.
