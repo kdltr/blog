@@ -1,22 +1,18 @@
-(use anaphora
-     colorize
-     html-parser
-     hyde
+;; deps: hyde lowdown sxml-transforms
+
+(use hyde
      hyde-atom
      lowdown
      posix
-     posix-extras
      srfi-1
      srfi-13
-     srfi-18
      sxml-transforms
-     uri-common)
+     irregex
+     data-structures
+     extras)
 
 ;; Todo list:
-;; * Tag atom feeds
-;; * Navigation links in posts
-;; * Table of content generation in posts
-;; * Posts archive page
+;; * Gopher phlog output
 ;; * Gallery-like history for the drawings page
 ;;
 ;; Done:
