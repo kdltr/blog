@@ -4,12 +4,10 @@
 `((aside
    (a (@ (href "/en/feed/posts.atom")) "atom feed"))
   (nav
-   ,(intersperse
-      (map
-        (lambda (p)
-          `((p (a (@ (href ,(page-path p))) ,($ 'title p))
-               " (posted on " ,(format-seconds ($ 'date p)) ")"
-             (br)
-              ,($ 'abstract p))))
-        (all-posts))
-      '(hr))))
+   ,(map
+      (lambda (p)
+        `((p ,(format-seconds ($ 'date p)) ": "
+             (a (@ (href ,(page-path p))) ,($ 'title p))
+             " "
+             ,($ 'abstract p))))
+      (all-posts))))
