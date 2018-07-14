@@ -19,6 +19,8 @@
     (header
      ,(menu-link "home" "index")
      " − "
+     ,(menu-link "now" "now")
+     " − "
      ,(menu-link "posts" "posts")
      " − "
      ,(menu-link "projects" "projects")
