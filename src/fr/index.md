@@ -27,8 +27,8 @@ Contact
 - Mastodon: [@Kooda@loutre.info][mastodon]
 - IRC: Kooda sur [Freenode][freenode]
 - Itch.io: [Kooda][itchio]
-- [Gitlab][gitlab] et [Github][github]
-- Liberapay: [Kooda][liberapay]
+- Picarto: [Kooda][picarto]
+- [Github][github]
 
 [git]:          /cgit.cgi
 [projects]:     projects.xhtml
@@ -36,12 +36,9 @@ Contact
 [blog]:         posts.xhtml
 [dailyotter]:   http://dailyotter.org/
 [mail]:         mailto:kooda@upyum.com
-[xmpp]:         xmpp:kooda@upyum.com?subscribe
-[mastodon]:      https://loutre.info/@Kooda
-[twitch]:       http://www.twitch.tv/kdltr/
+[mastodon]:     https://loutre.info/@Kooda
 [freenode]:     irc://chat.freenode.org/Kooda,isnick
 [github]:       https://github.com/kdltr
-[gitlab]:       https://gitlab.com/u/kooda
-[liberapay]:    https://liberapay.com/Kooda/
 [itchio]:       https://kooda.itch.io/
 [matrix]:       https://matrix.to/#/@Kooda:elynx.fr
+[picarto]:      https://picarto.tv/kooda

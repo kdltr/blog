@@ -11,7 +11,7 @@ Attention ! Pour le moment ce logiciel est en qualité alpha !
 
 Dernière version : **0.4**
 
-Si vous appréciez ce projet, n’hésitez pas à [faire un don](https://liberapay.com/Kooda/donate) !
+Si vous appréciez ce projet, n’hésitez pas à [faire un don](../donate.xhtml) !
 
 Salon de discussion autour du projet : [#ensemble:elynx.fr](https://matrix.to/#/#ensemble:elynx.fr)
 

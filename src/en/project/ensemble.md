@@ -11,7 +11,7 @@ Beware! For now, this software is alpha quality at best!
 
 Latest version: **0.4**
 
-If you like this project, please consider [making a donation](https://liberapay.com/Kooda/donate)!
+If you like this project, please consider [making a donation](../donate.xhtml)!
 
 Chat room about the project: [#ensemble:elynx.fr](https://matrix.to/#/#ensemble:elynx.fr)
 
