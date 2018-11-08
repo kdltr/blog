@@ -36,6 +36,8 @@ Downloads
 
 <iframe frameborder="0" src="https://itch.io/embed/66540" width="552" height="167"></iframe>
 
+Source code is [available here](/cgit.cgi/life-is-so-pretty/).
+
 [reptifur]: https://repti.fr
 [lizenn]: https://www.twitch.tv/lizenn
 

@@ -9,10 +9,13 @@ Logiciels
 - [CHICKEN Scheme](https://call-cc.org/), un compilateur et interpreteur pour le langage Scheme, dont je suis devenu officiellement mainteneur le 20 janvier 2017.
 - [Hardwood](http://wiki.call-cc.org/eggref/4/hardwood), une API modelée d’après Erlang pour CHICKEN Scheme.
 
-Jeux vidéo
-==========
+Jeux vidéo et art infographique
+===============================
 
-- [Life is so Pretty](project/life-is-so-pretty.xhtml), un jeu créé à l’occasion de la game jam Lisp du printemps 2016.
+- [Smlilme](project/smlilme.xhtml), un prototype de jeu calme fait pour la Lisp Jam de l’automne 2018.
+- [Confiture de Fraises](project/confiture-de-fraises.xhtml), un jeu lubrique fait à l’occasion de la Strawerry Jam 2 (2018).
+- [Générateur de fleurs](project/flower-generator.xhtml) créé pour la ProcJam 2017.
+- [Life is so Pretty](project/life-is-so-pretty.xhtml), un jeu sur la dépression créé à l’occasion de la game jam Lisp du printemps 2016.
 - [Crepes-party-hard-yolo-swag 2015](project/cphys2015.xhtml), un jeu rétro créé dans le cadre de l’enseignement de Scheme.
 - [LSDPad](project/lsdpad.xhtml), un éditeur de texte jouet fait pour la Global Game Jam 2015.
 - [Perception Saga](project/perception-saga.xhtml), un jeu synesthésique fait pour la Global Game Jam 2014.
