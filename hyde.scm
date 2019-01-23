@@ -1,15 +1,17 @@
 ;; deps: hyde lowdown sxml-transforms
 
-(use hyde
-     hyde-atom
-     lowdown
-     posix
-     srfi-1
-     srfi-13
-     sxml-transforms
-     irregex
-     data-structures
-     extras)
+(import
+  (chicken io)
+  (chicken irregex)
+  (chicken sort)
+  (chicken string)
+  (chicken time posix)
+  hyde
+  (hyde atom)
+  lowdown
+  srfi-1
+  srfi-13
+  sxml-transforms)
 
 ;; Todo list:
 ;; * Gopher phlog output
