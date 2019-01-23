@@ -24,7 +24,7 @@ Contact
 
 - Mail/XMPP: [kooda@upyum.com][mail]
 - Matrix: [@Kooda:elynx.fr][matrix]
-- Mastodon: [@Kooda@loutre.info][mastodon]
+- Mastodon: <a rel='me' href='https://loutre.info/@Kooda'>@Kooda@loutre.info</a>
 - IRC: Kooda sur [Freenode][freenode]
 - Itch.io: [Kooda][itchio]
 - Picarto: [Kooda][picarto]
@@ -36,7 +36,6 @@ Contact
 [blog]:         posts.xhtml
 [dailyotter]:   http://dailyotter.org/
 [mail]:         mailto:kooda@upyum.com
-[mastodon]:     https://loutre.info/@Kooda
 [freenode]:     irc://chat.freenode.org/Kooda,isnick
 [github]:       https://github.com/kdltr
 [itchio]:       https://kooda.itch.io/
