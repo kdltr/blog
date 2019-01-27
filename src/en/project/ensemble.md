@@ -9,7 +9,7 @@ The goal is to have a featureful client, with a lean interface, that doesn’t r
 
 Beware! For now, this software is alpha quality at best!
 
-Latest version: **0.4**
+Latest version: **[0.5](#releases)**
 
 If you like this project, please consider [making a donation](../donate.xhtml)!
 
@@ -17,16 +17,10 @@ Chat room about the project: [#ensemble:elynx.fr](https://matrix.to/#/#ensemble:
 
 # Screenshots
 
-![Ensemble 0.3 screenshot](/projects/ensemble/screenshots/ensemble-0.3.png)
+![Ensemble 0.5 screenshot](/projects/ensemble/screenshots/ensemble-0.5.png)
 
-# Binary downloads
-
-Dependencies: ncursesw 6.0, openssl 1.1.0, CHICKEN 4.13.0 (for sources only)
-
-- Ensemble 0.4 (2018-01-14) − [linux amd64](/projects/ensemble/releases/ensemble-0.4-linux-amd64.tgz) − [sources](/projects/ensemble/releases/ensemble-0.4-src.tgz)
-- Ensemble 0.3 (2018-01-06) − [linux amd64](/projects/ensemble/releases/ensemble-0.3-linux-amd64.tgz) − [sources](/projects/ensemble/releases/ensemble-0.3-src.tgz)
-- Ensemble 0.2 (2017-07-18) − [linux amd64](/projects/ensemble/releases/ensemble-0.2-linux-amd64.tgz)
-- Ensemble 0.1 (2017-07-14) − [linux amd64](/projects/ensemble/releases/matrix-client-0.1-linux-amd64.tgz)
+Ensemble on a 2009 phone!
+![Ensemble 0.5 on Maemo](/projects/ensemble/screenshots/ensemble-0.5-n900.png)
 
 # Code repository
 
@@ -35,7 +29,33 @@ Dependencies: ncursesw 6.0, openssl 1.1.0, CHICKEN 4.13.0 (for sources only)
 
 # Roadmap for next release (0.5)
 
-- Very big codebase cleanup/rewrite
-- Plugin system
+- Multiple profiles support
 
 Full to-do list available [here](/cgit.cgi/ensemble/tree/README.md).
+
+# Releases
+
+## 0.5 (2019-01-27)
+
+Source dependencies: CHICKEN 5.0.0, ncursesw, openssl
+
+- [sources](/projects/ensemble/releases/ensemble-0.5-src.tgz)
+
+## 0.4 (2018-01-14)
+
+Binary dependencies: ncursesw 6.0, openssl 1.1.0
+
+Source dependencies: CHICKEN 4.13.0, ncursesw, openssl
+
+- [linux amd64](/projects/ensemble/releases/ensemble-0.4-linux-amd64.tgz)
+- [sources](/projects/ensemble/releases/ensemble-0.4-src.tgz)
+
+## 0.3 (2018-01-06)
+- [linux amd64](/projects/ensemble/releases/ensemble-0.3-linux-amd64.tgz)
+- [sources](/projects/ensemble/releases/ensemble-0.3-src.tgz)
+
+## 0.2 (2017-07-18)
+- [linux amd64](/projects/ensemble/releases/ensemble-0.2-linux-amd64.tgz)
+
+## 0.1 (2017-07-14)
+- [linux amd64](/projects/ensemble/releases/matrix-client-0.1-linux-amd64.tgz)
