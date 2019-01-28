@@ -37,8 +37,12 @@ Liste des tâches complète disponible [ici](/cgit.cgi/ensemble/tree/README.md).
 
 ## 0.5 (2019-01-27)
 
+Dépendances des binaires : ncursesw 5, openssl 1.1.0
+
 Dépendances des sources : CHICKEN 5.0.0, ncursesw, openssl
 
+- [linux amd64](/projects/ensemble/releases/ensemble-0.5-linux-amd64.tgz)
+- [linux i386](/projects/ensemble/releases/ensemble-0.5-linux-i386.tgz)
 - [sources](/projects/ensemble/releases/ensemble-0.5-src.tgz)
 
 ## 0.4 (2018-01-14)

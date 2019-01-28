@@ -37,8 +37,12 @@ Full to-do list available [here](/cgit.cgi/ensemble/tree/README.md).
 
 ## 0.5 (2019-01-27)
 
+Binary dependencies: ncursesw 5, openssl 1.1.0
+
 Source dependencies: CHICKEN 5.0.0, ncursesw, openssl
 
+- [linux amd64](/projects/ensemble/releases/ensemble-0.5-linux-amd64.tgz)
+- [linux i386](/projects/ensemble/releases/ensemble-0.5-linux-i386.tgz)
 - [sources](/projects/ensemble/releases/ensemble-0.5-src.tgz)
 
 ## 0.4 (2018-01-14)
