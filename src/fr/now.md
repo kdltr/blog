@@ -2,19 +2,10 @@
 
 Je suis actuellement chez moi, à Rennes.
 
-Ces jours si je travaille beaucoup sur Ensemble et CHICKEN Scheme, une
-nouvelle version de ces deux projet est en préparation. J’ai hâte !
+J’essaye de prendre soin de ma santé, que j’ai négligée pendant assez longtemps…
 
-Je joue toujours du violoncelle, mais j’ai un peu de mal en ce
-moment. Je ne suis pas content des résultats.
+Je n’ai pas streamé depuis un moment, mais j’aimerais vraiment m’y remettre. Pareil pour le violoncelle.
 
-Je me suis mis à streamer régulièrement ! On peut me retrouver tous
-les mardi et jeudi après-midi sur [Picarto](https://picarto.tv/Kooda) !
+J’arrive à coder un peu tous les jours, je trouve et corrige des bugs de CHICKEN, et je porte du code pour CHICKEN 5.
 
-J’ai toujours envie de me lancer un défi de créer un petit jeu vidéo
-tous les mois, je pense aussi beaucoup à créer des applications web
-minimalistes faciles à héberger et accéder. Tout ça sera bien plus
-facile une fois que CHICKEN 5.0 sera sorti, car la prise en charge des
-exécutables statiques est grandement simplifiée.
-
-[Une page “now”](https://nownownow.com/about), dernière mise à jour : 10-08-2018
+[Une page “now”](https://nownownow.com/about), dernière mise à jour : 03-02-2019
