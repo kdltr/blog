@@ -25,3 +25,8 @@ Sites web
 
 - [repti.fr](https://repti.fr), le site web de mon artiste attitré.
 - [upyum.com](https://www.upyum.com), ici même !
+
+Musique
+=======
+
+- [Singles divers](project/music-singles.xhtml)

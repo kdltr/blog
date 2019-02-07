@@ -25,3 +25,8 @@ Websites
 
 - [repti.fr](https://repti.fr), my usual artist’s website.
 - [upyum.com](https://www.upyum.com), here!
+
+Music
+=====
+
+- [Various music singles](project/music-singles.xhtml)
