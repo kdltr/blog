@@ -4,7 +4,7 @@
 Logiciels
 =========
 
-- [Star Gopher](https://gopher.floodgap.com/gopher/gw?a=gopher%3A%2F%2Fsteven.upyum.com), horaires en temps réel des transports publiques de la ville de Rennes, sur Gopher.
+- [Star Gopher](https://gopher.floodgap.com/gopher/gw?=upyum.com+70+312f73746172), horaires en temps réel des transports publiques de la ville de Rennes, sur Gopher.
 - [Ensemble](project/ensemble.xhtml), un client Matrix en console écrit en Scheme.
 - [EZD](/cgit.cgi/ezd), une bibliothèque / un serveur boite à outil pour la création d’interfaces graphiques.
 - [CHICKEN Scheme](https://call-cc.org/), un compilateur et interpreteur pour le langage Scheme, dont je suis devenu officiellement mainteneur le 20 janvier 2017.
