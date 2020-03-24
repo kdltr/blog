@@ -1,0 +1,3 @@
+hyde serve
+hyde
+rsync -avcn out/ natsu:web-root/
