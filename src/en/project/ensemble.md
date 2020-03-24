@@ -9,7 +9,7 @@ The goal is to have a featureful client, with a lean interface, that doesn’t r
 
 Beware! For now, this software is alpha quality at best!
 
-Latest version: **[0.5](#releases)**
+Latest version: **[2020.03.24](#releases)**
 
 If you like this project, please consider [making a donation](../donate.xhtml)!
 
@@ -27,13 +27,19 @@ Ensemble on a 2009 phone!
 - [Git web interface](https://www.upyum.com/cgit.cgi/ensemble/)
 - clone url: git://upyum.com/ensemble
 
-# Roadmap for next release (0.5)
-
-- Multiple profiles support
-
 Full to-do list available [here](/cgit.cgi/ensemble/tree/README.md).
 
 # Releases
+
+## 2020.03.24
+
+Binary dependencies: ncursesw 5, openssl 1.1
+
+Source dependencies: CHICKEN 5.2.0, ncursesw, openssl
+
+- [linux amd64](/projects/ensemble/releases/ensemble-2020.03.24-linux-amd64.tar.gz)
+- [linux i386](/projects/ensemble/releases/ensemble-2020.03.24-linux-i386.tar.gz)
+- [sources](/projects/ensemble/releases/ensemble-2020.03.24.tar.gz)
 
 ## 0.5 (2019-01-27)
 

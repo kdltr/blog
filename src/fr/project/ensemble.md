@@ -9,7 +9,7 @@ L’objectif est d’avoir un client plein de fonctionnalités, avec une interfa
 
 Attention ! Pour le moment ce logiciel est en qualité alpha !
 
-Dernière version : **[0.5](#tlchargement)**
+Dernière version : **[2020.03.24](#tlchargement)**
 
 Si vous appréciez ce projet, n’hésitez pas à [faire un don](../donate.xhtml) !
 
@@ -27,13 +27,19 @@ Ensemble sur un téléphone de 2009 !
 - [Interface git web](https://www.upyum.com/cgit.cgi/ensemble/)
 - URL de clônage : git://upyum.com/ensemble
 
-# Feuille de route pour la prochaine version (0.6)
-
-- Gestion de multiples profiles
-
 Liste des tâches complète disponible [ici](/cgit.cgi/ensemble/tree/README.md).
 
 # Téléchargement
+
+## 2020.03.24
+
+Dépendances des binaires : ncursesw 5, openssl 1.1.0
+
+Dépendances des sources : CHICKEN 5.2.0, ncursesw, openssl
+
+- [linux amd64](/projects/ensemble/releases/ensemble-2020.03.24-linux-amd64.tar.gz)
+- [linux i386](/projects/ensemble/releases/ensemble-2020.03.24-linux-i386.tar.gz)
+- [sources](/projects/ensemble/releases/ensemble-2020.03.24.tar.gz)
 
 ## 0.5 (2019-01-27)
 
